@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.aquafinaapp.Controller.customerController;
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.common.preferences;
@@ -17,6 +18,8 @@ public class loginPage extends AppCompatActivity {
 
     private Button btnLogin;
     private EditText etUserName, etPassword;
+
+    customerController customerController = new customerController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +45,18 @@ public class loginPage extends AppCompatActivity {
 //            if (userName.isEmpty() || password.isEmpty()) {
             if (userName.isEmpty() || password.isEmpty()) {
                 Toast.makeText(loginPage.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
-            } else {
+            }
+
+            else if (customerController.checkUser(userName, password)) {
+
                 preferences.putLogInStatus(getApplicationContext(), true);
                 preferences.putLoggedInUser(getApplicationContext(), userName);
 
                 Intent login = new Intent(loginPage.this, MainActivity.class);
                 startActivity(login);
+            }
+            else {
+                Toast.makeText(loginPage.this, "User not found!!", Toast.LENGTH_SHORT).show();
             }
         }
     };
