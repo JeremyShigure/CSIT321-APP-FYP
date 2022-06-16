@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AquaFina App</string>
+    <string name="title_home">Home</string>
+    <string name="title_payment">Payment</string>
+    <string name="title_userInfo">User Info</string>
+    <string name="title_faq">FAQ</string>
+</resources>
