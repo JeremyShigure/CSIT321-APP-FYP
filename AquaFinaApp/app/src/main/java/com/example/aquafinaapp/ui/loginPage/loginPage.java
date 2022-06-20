@@ -10,14 +10,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.aquafinaapp.Controller.customerController;
+import com.example.aquafinaapp.Entity.customer;
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.common.preferences;
+
+import java.io.File;
 
 public class loginPage extends AppCompatActivity {
 
     private Button btnLogin;
     private EditText etUserName, etPassword;
+
+    customer cus = new customer(this);
 
     customerController customerController = new customerController();
 
@@ -32,6 +37,19 @@ public class loginPage extends AppCompatActivity {
         btnLogin = (Button)findViewById(R.id.loginButton);
 
         btnLogin.setOnClickListener(btnLoginListener);
+
+        File database = getApplicationContext().getDatabasePath(customerController.DBNAME);
+        if (database.exists() == false) {
+
+            cus.getReadableDatabase();
+
+            if (customerController.copyDatabase(this)) {
+                Toast.makeText(this, "Copy database success!!!!!!!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Copy data error", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
     }
 
     private View.OnClickListener btnLoginListener = new View.OnClickListener() {
