@@ -1,6 +1,8 @@
 package com.example.aquafinaapp.Controller;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +36,11 @@ public class customerController extends AppCompatActivity {
         else {
             return false;
         }
+    }
+
+    public Cursor viewUserInfo(String userName, String password) {
+        Cursor res = customer.viewUserInfo(userName, password);
+        return res;
     }
 
 }

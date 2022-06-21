@@ -20,7 +20,6 @@ public class customer extends SQLiteOpenHelper {
     private Context mContext;
     private SQLiteDatabase mDatabase;
 
-
     int cID;
     String cUsername;
     String cPassword;
@@ -112,6 +111,10 @@ public class customer extends SQLiteOpenHelper {
         this.wmID = wmID;
     }
 
+    public customer(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, DBNAME, factory, version); //Prevents it from creating an SQL .db file until you set a name to a value instead of null
+    }
+
     public customer(Context context) {
         super(context, DBNAME, null, 1);
         this.mContext = context;
@@ -185,5 +188,16 @@ public class customer extends SQLiteOpenHelper {
             return false;
         }
     }
+
+    public Cursor viewUserInfo(String userName, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String[] selectionArgs = new String[]{userName, password};
+
+        Cursor res = db.rawQuery("SELECT cName, cContact, cEmail, cRegion, cAddress FROM " + "customer" + " WHERE " + "cUsername =? AND cPassword =?", selectionArgs);
+        return res;
+    }
+
+
 
 }

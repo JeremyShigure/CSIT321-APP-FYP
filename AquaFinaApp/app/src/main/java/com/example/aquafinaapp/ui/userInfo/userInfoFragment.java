@@ -22,7 +22,7 @@ import com.example.aquafinaapp.ui.paymentSuccessful.paymentSuccessful;
 
 public class userInfoFragment extends Fragment implements View.OnClickListener{
 
-    Button logoutButton;
+    Button viewUserInfoButton, updateUserInfoButton, aboutUsInfoButton, logoutButton;
 
     private FragmentUserInfoBinding binding;
 
@@ -33,11 +33,19 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
         binding = FragmentUserInfoBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        viewUserInfoButton = (Button) root.findViewById(R.id.viewUserInfoButton);
+        updateUserInfoButton = (Button) root.findViewById(R.id.updateUserInfoButton);
+        aboutUsInfoButton = (Button) root.findViewById(R.id.aboutUsInfoButton);
         logoutButton = (Button) root.findViewById(R.id.logoutButton);
+
+        viewUserInfoButton.setOnClickListener(viewUserInfo);
+        updateUserInfoButton.setOnClickListener(updateUserInfo);
+        aboutUsInfoButton.setOnClickListener(aboutUs);
+
         logoutButton.setOnClickListener(this);
 
-        final TextView textView = binding.textNotifications;
-        InfoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textNotifications;
+//        InfoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -66,4 +74,31 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
 
                 }).create().show();
     }
+
+    private View.OnClickListener viewUserInfo = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent viewUserInfoActivity = new Intent(getActivity(), viewUserInfo.class);
+            startActivity(viewUserInfoActivity);
+        }
+    };
+
+    private View.OnClickListener updateUserInfo = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent updateUserInfoActivity = new Intent(getActivity(), updateUserInfo.class);
+            startActivity(updateUserInfoActivity);
+        }
+    };
+
+    private View.OnClickListener aboutUs = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent aboutUsActivity = new Intent(getActivity(), aboutUs.class);
+            startActivity(aboutUsActivity);
+        }
+    };
+
+
+
 }
