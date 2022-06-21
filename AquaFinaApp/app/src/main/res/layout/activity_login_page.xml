@@ -8,30 +8,29 @@
 
 
 
-    <TextView
-        android:id="@+id/loginText"
-        android:layout_width="263dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="48dp"
-        android:text="Login"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/loginText"-->
+<!--        android:layout_width="263dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:text="Login"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
     <ImageView
         android:id="@+id/imAppIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:foregroundGravity="center"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/aquafina_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginText">
+        app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
 

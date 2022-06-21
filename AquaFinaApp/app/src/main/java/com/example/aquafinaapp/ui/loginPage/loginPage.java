@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,9 +45,11 @@ public class loginPage extends AppCompatActivity {
             cus.getReadableDatabase();
 
             if (customerController.copyDatabase(this)) {
-                Toast.makeText(this, "Copy database success!!!!!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Copy database success!!!!!!!", Toast.LENGTH_SHORT);
+                System.out.println("Copy database success!!!!!!!");
             } else {
-                Toast.makeText(this, "Copy data error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Copy data error", Toast.LENGTH_SHORT);
+                System.out.println("Copy data error");
                 return;
             }
         }
