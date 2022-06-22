@@ -15,7 +15,7 @@ import com.example.aquafinaapp.R;
 
 public class viewUserInfo extends AppCompatActivity {
 
-    TextView tvShowUserName, tvShowContactNo, tvShowEmail, tvShowRegion, tvShowAddress;
+    TextView tvShowUserName, tvShowContactNo, tvShowEmail, tvShowRegion, tvShowAddress, tvShowFullName;
     Button returnHomeButton, updateUserInfoButton;
 
     private String userName;
@@ -26,6 +26,7 @@ public class viewUserInfo extends AppCompatActivity {
     private String showTvShowEmail;
     private String showTvShowRegion;
     private String showTvShowAddress;
+    private String showTvShowFullName;
 
     customerController customerController = new customerController();
 
@@ -43,6 +44,7 @@ public class viewUserInfo extends AppCompatActivity {
         tvShowEmail = findViewById(R.id.tvShowEmail);
         tvShowRegion = findViewById(R.id.tvShowRegion);
         tvShowAddress = findViewById(R.id.tvShowAddress);
+        tvShowFullName = findViewById(R.id.tvShowFullName);
 
         returnHomeButton = findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
@@ -64,6 +66,7 @@ public class viewUserInfo extends AppCompatActivity {
                     showTvShowEmail = res.getString(2);
                     showTvShowRegion = res.getString(3);
                     showTvShowAddress = res.getString(4);
+                    showTvShowFullName = res.getString(5);
 
                 } while (res.moveToNext());
             }
@@ -74,6 +77,7 @@ public class viewUserInfo extends AppCompatActivity {
         tvShowEmail.setText(showTvShowEmail);
         tvShowRegion.setText(showTvShowRegion);
         tvShowAddress.setText(showTvShowAddress);
+        tvShowFullName.setText(showTvShowFullName);
 
 
     }

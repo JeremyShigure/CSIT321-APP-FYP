@@ -198,7 +198,7 @@ public class customer extends SQLiteOpenHelper {
         //testing
         System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
         System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
-        Cursor res = db.rawQuery("SELECT cName, cContact, cEmail, cRegion, cAddress FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
+        Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
         return res;
     }
 
