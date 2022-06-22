@@ -195,6 +195,7 @@ public class customer extends SQLiteOpenHelper {
 
         String[] selectionArgs = new String[]{userName, password};
 
+        //testing
         System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
         System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
         Cursor res = db.rawQuery("SELECT cName, cContact, cEmail, cRegion, cAddress FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
