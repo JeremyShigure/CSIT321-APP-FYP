@@ -1,6 +1,8 @@
 package com.example.aquafinaapp.ui.loginPage;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import com.example.aquafinaapp.Entity.customer;
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.common.preferences;
+import com.example.aquafinaapp.ui.userInfo.userInfoFragment;
 
 import java.io.File;
 
@@ -74,6 +77,22 @@ public class loginPage extends AppCompatActivity {
                 preferences.putLoggedInUser(getApplicationContext(), userName);
 
                 Intent login = new Intent(loginPage.this, MainActivity.class);
+//                login.putExtra("userName", etUserName.getText().toString());
+//                login.putExtra("password", etPassword.getText().toString());
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("userName", etUserName.getText().toString());
+                bundle.putString("password", etPassword.getText().toString());
+
+                userInfoFragment myFrag = new userInfoFragment();
+
+                myFrag.setArguments(bundle);
+//                fragmentTransaction.replace(R.id.navigation_userInfo).commit();
+
+                login.putExtras(bundle);
                 startActivity(login);
             }
             else {

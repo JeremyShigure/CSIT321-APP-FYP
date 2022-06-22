@@ -41,9 +41,11 @@
 
         <TextView
             android:id="@+id/tvShowUserName"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
             app:layout_constraintStart_toEndOf="@+id/tvUserName"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,10 +71,11 @@
 
         <TextView
             android:id="@+id/tvShowContactNo"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20dp"
             app:layout_constraintStart_toEndOf="@+id/tvContactNo"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -97,10 +100,11 @@
 
         <TextView
             android:id="@+id/tvShowEmail"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20dp"
             app:layout_constraintStart_toEndOf="@+id/tvEmail"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -125,10 +129,11 @@
 
         <TextView
             android:id="@+id/tvShowRegion"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="20dp"
             app:layout_constraintStart_toEndOf="@+id/tvRegion"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -179,13 +184,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvShowAddress"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:id="@+id/addressRelativeLayout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvAddress"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvShowAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:maxLines="5"
+                android:lines="5"
+                />
+
+        </RelativeLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -220,15 +238,32 @@
     <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <Button
+        android:id="@+id/updateUserInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:background="#FAF8F8"
+        android:backgroundTint="#E6A08A"
+        android:text="Update Info"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:backgroundTint="#8591AF"
+        app:icon="@drawable/ic_baseline_update_24"
+        app:iconSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clAddress" />
+
+    <Button
         android:id="@+id/returnHomeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="76dp"
         android:text="Return to home page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clAddress">
+        app:layout_constraintTop_toBottomOf="@+id/updateUserInfoButton">
 
     </Button>
 

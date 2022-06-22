@@ -58,6 +58,7 @@
             android:id="@+id/etUserName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvUserName"
             app:layout_constraintTop_toTopOf="parent" />
@@ -86,6 +87,7 @@
             android:id="@+id/etPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             app:layout_constraintStart_toEndOf="@+id/tvPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -1,5 +1,6 @@
 package com.example.aquafinaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+    private String userName;
+    private String password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -23,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Intent intent = getIntent();
+        userName = intent.getStringExtra("userName");
+        password = intent.getStringExtra("password");
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

@@ -24,23 +24,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/updateUserInfoButton"
-        android:layout_width="393dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="40dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="Update Info"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:backgroundTint="#8591AF"
-        app:icon="@drawable/ic_baseline_update_24"
-        app:iconSize="90dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewUserInfoButton" />
-
-    <Button
         android:id="@+id/aboutUsInfoButton"
         android:layout_width="393dp"
         android:layout_height="81dp"
@@ -55,7 +38,7 @@
         app:iconSize="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateUserInfoButton" />
+        app:layout_constraintTop_toBottomOf="@+id/viewUserInfoButton" />
 
     <Button
         android:id="@+id/logoutButton"

@@ -130,16 +130,17 @@ public class customer extends SQLiteOpenHelper {
 
     }
 
-    public void openDatabase(){
+    public SQLiteDatabase openDatabase(){
 //        String path = DBLOCATION + DBNAME;
 //        mDatabase = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);
 //        return mDatabase;
 
         String dbPath = DBLOCATION + DBNAME;
         if (mDatabase != null && mDatabase.isOpen()) {
-            return;
+            return mDatabase;
         }
         mDatabase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
+        return mDatabase;
     }
 
     public void closeDatabase() {
@@ -190,11 +191,13 @@ public class customer extends SQLiteOpenHelper {
     }
 
     public Cursor viewUserInfo(String userName, String password) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = openDatabase();
 
         String[] selectionArgs = new String[]{userName, password};
 
-        Cursor res = db.rawQuery("SELECT cName, cContact, cEmail, cRegion, cAddress FROM " + "customer" + " WHERE " + "cUsername =? AND cPassword =?", selectionArgs);
+        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
+        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
+        Cursor res = db.rawQuery("SELECT cName, cContact, cEmail, cRegion, cAddress FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
         return res;
     }
 
