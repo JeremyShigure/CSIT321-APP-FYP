@@ -37,7 +37,6 @@ public class FAQFragment extends Fragment {
         initData();
         setRecyclerView();
 
-
 //        final TextView textView = binding.textFaq;
 //        faqViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
@@ -47,18 +46,17 @@ public class FAQFragment extends Fragment {
         faqAdapter faqAdapter = new faqAdapter(faqQuestionsList);
         recyclerView.setAdapter(faqAdapter);
         recyclerView.setHasFixedSize(true);
-
     }
 
     private void initData() {
         faqQuestionsList = new ArrayList<>();
 
-        faqQuestionsList.add(new faqWords("This is question 1", "Try see this faq question 1 for more info yey asdasdsadsadasdsadsadsadsadas  asdas asd asdsa dasdas dasd adas dasdasdsadsad das as das da das das das dsadasdasdasdasdasdsdasdsdaadsend of words"));
-        faqQuestionsList.add(new faqWords("This is question 2", "Try see this faq question 2 for more info yey "));
-        faqQuestionsList.add(new faqWords("This is question 3", "Try see this faq question 3 for more info yey "));
-        faqQuestionsList.add(new faqWords("This is question 4", "Try see this faq question 4 for more info yey "));
-        faqQuestionsList.add(new faqWords("This is question 5", "Try see this faq question 5 for more info yey "));
-        faqQuestionsList.add(new faqWords("This is question 6", "Try see this faq question 6 for more info yey "));
+        faqQuestionsList.add(new faqWords("What if I am moving to another address?", "Please call our hotline to inform our staffs of your address change and other assistance"));
+        faqQuestionsList.add(new faqWords("My water meter is not recording accurately", "Please book an appointment with us to fix your water meter"));
+        faqQuestionsList.add(new faqWords("What if I changed my mobile number?", "Please head to your profile under the 'More' options below to update your particulars"));
+        faqQuestionsList.add(new faqWords("What if I forget my password?", "Please click on the 'Forgot Password' button on the login page to reset your password"));
+        faqQuestionsList.add(new faqWords("I would like to enquire about other information", "You can contact us at 68302991. Alternatively, you can also email us at admin@aquafina.com"));
+        faqQuestionsList.add(new faqWords("My username has been compromised, what can I do?", "You can head to your profile and update your account with a new username and password"));
 //        faqQuestionsList.add(new faqWords("", ""));
 
     }

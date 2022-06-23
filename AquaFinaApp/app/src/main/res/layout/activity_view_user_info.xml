@@ -19,17 +19,19 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"/>
-            <!--android:src="@drawable/aquafinacircle"-->
+            android:layout_marginTop="20dp"
+            android:src="@drawable/aquafinacircle"/>
+
 
         <TextView
             android:id="@+id/tvShowFullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/profile_image"
             android:fontFamily="@font/robotobold"
+            android:gravity="center_vertical"
             android:includeFontPadding="false"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -68,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/robotobold"
+                    android:fontFamily="@font/opensans_reg"
                     android:text="Welcome to your Profile"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
@@ -101,7 +103,8 @@
             android:layout_height="wrap_content"
             android:text="Username"
             android:textColor="@color/black"
-            android:textSize="13dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/opensans_reg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -110,8 +113,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserratreg"
-            android:textSize="18dp" />
+            android:fontFamily="@font/opensans_reg"
+            android:textSize="17dp" />
         <!--app:layout_constraintStart_toEndOf="@+id/tvUserName"
         app:layout_constraintTop_toTopOf="parent"-->
 
@@ -137,8 +140,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Contact No"
-            android:textSize="13dp"
+            android:textSize="14dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/opensans_reg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -147,8 +151,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserratreg"
-            android:textSize="18dp"
+            android:fontFamily="@font/opensans_reg"
+            android:textSize="17dp"
             app:layout_constraintStart_toEndOf="@+id/tvContactNo"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -173,8 +177,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Email"
-            android:textSize="13dp"
+            android:textSize="14dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/opensans_reg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -183,8 +188,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserratreg"
-            android:textSize="18dp"
+            android:fontFamily="@font/opensans_reg"
+            android:textSize="17dp"
             app:layout_constraintStart_toEndOf="@+id/tvEmail"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -210,8 +215,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Region"
-            android:textSize="13dp"
+            android:textSize="14dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/opensans_reg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -220,8 +226,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserratreg"
-            android:textSize="18dp"
+            android:fontFamily="@font/opensans_reg"
+            android:textSize="17dp"
             app:layout_constraintStart_toEndOf="@+id/tvRegion"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -275,7 +281,8 @@
             android:layout_marginTop="5dp"
             android:text="Address"
             android:textColor="@color/black"
-            android:textSize="13dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/opensans_reg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -284,8 +291,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:fontFamily="@font/montserratreg"
-            android:textSize="18dp"
+            android:fontFamily="@font/opensans_reg"
+            android:textSize="17dp"
             app:layout_constraintTop_toBottomOf="@+id/tvAddress"/>
 
         <View
@@ -341,6 +348,7 @@
             android:text="Update Profile"
             android:textColor="@color/white"
             android:textSize="13dp"
+            android:fontFamily="@font/antic"
             app:backgroundTint="#0047ab"
             app:icon="@drawable/ic_baseline_update_24"
             app:iconSize="15dp" />
@@ -354,7 +362,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#0047ab"
             android:textSize="13dp"
-            android:text="Return to home page"/>
+            android:text="Return to home page"
+            android:fontFamily="@font/antic"/>
         <!--app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"

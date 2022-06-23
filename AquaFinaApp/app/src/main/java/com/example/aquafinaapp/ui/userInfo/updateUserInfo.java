@@ -22,9 +22,9 @@ public class updateUserInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_info);
 
-        etContactNo = (EditText) findViewById(R.id.etContactNo);
+        etContactNo = (EditText) findViewById(R.id.etUserName);
         etEmail = (EditText) findViewById(R.id.etEmail);
-        etAddress = (EditText) findViewById(R.id.etAddress);
+        //etAddress = (EditText) findViewById(R.id.etAddress);
         etPassword = (EditText) findViewById(R.id.etPassword);
         etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
 

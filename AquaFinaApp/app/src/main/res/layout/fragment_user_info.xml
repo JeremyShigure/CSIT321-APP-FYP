@@ -6,36 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.userInfo.userInfoFragment">
 
+
     <Button
         android:id="@+id/viewUserInfoButton"
-        android:layout_width="393dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="200dp"
         android:background="#FAF8F8"
         android:backgroundTint="#E6A08A"
-        android:text="View Info"
+        android:text="Manage Profile"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:backgroundTint="#8591AF"
+        android:fontFamily="@font/robotoregular"
+        app:backgroundTint="#B0B0B0"
         app:icon="@drawable/ic_baseline_supervised_user_circle_24"
-        app:iconSize="90dp"
+        app:iconSize="50dp"
+        android:gravity="left|center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/aboutUsInfoButton"
-        android:layout_width="393dp"
-        android:layout_height="81dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:layout_marginTop="40dp"
         android:background="#FAF8F8"
         android:backgroundTint="#E6A08A"
-        android:text="About us"
+        android:text="contact us"
+        android:fontFamily="@font/robotoregular"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:backgroundTint="#8591AF"
+        app:backgroundTint="#B0B0B0"
         app:icon="@drawable/ic_baseline_info_24"
-        app:iconSize="90dp"
+        app:iconSize="50dp"
+        android:gravity="left|center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewUserInfoButton" />
@@ -45,14 +50,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
+        android:backgroundTint="#0047ab"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aboutUsInfoButton"
-        app:layout_constraintVertical_bias="0.607">
+        app:layout_constraintVertical_bias="0.25"/>
 
-    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
