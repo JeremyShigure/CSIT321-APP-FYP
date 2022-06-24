@@ -16,11 +16,17 @@ public class updateUserInfo extends AppCompatActivity {
     EditText etContactNo, etEmail, etAddress, etPassword, etConfirmPassword;
     Button returnHomeButton;
 
+    private String userName;
+    private String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_info);
+
+        Intent intent = getIntent();
+        userName = intent.getStringExtra("userName");
+        password = intent.getStringExtra("password");
 
         etContactNo = (EditText) findViewById(R.id.etUserName);
         etEmail = (EditText) findViewById(R.id.etEmail);
@@ -40,6 +46,8 @@ public class updateUserInfo extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
+            updateAndReturnHomeActivity.putExtra("userName", userName);
+            updateAndReturnHomeActivity.putExtra("password", password);
             startActivity(updateAndReturnHomeActivity);
         }
     };

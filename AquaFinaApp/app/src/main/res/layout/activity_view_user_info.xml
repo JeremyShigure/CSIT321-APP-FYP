@@ -20,8 +20,7 @@
             android:layout_height="100dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/aquafinacircle"/>
-
+            android:src="@drawable/aquafinacircle"></ImageView>
 
         <TextView
             android:id="@+id/tvShowFullName"
