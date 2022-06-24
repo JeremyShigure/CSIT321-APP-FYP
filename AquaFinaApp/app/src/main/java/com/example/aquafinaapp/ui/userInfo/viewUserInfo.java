@@ -98,6 +98,8 @@ public class viewUserInfo extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent updateUserInfoActivity = new Intent(viewUserInfo.this, updateUserInfo.class);
+            updateUserInfoActivity.putExtra("userName", userName);
+            updateUserInfoActivity.putExtra("password", password);
             startActivity(updateUserInfoActivity);
         }
     };
