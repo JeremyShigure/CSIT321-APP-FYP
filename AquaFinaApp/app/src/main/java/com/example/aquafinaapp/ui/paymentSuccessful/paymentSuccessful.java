@@ -14,10 +14,17 @@ public class paymentSuccessful extends AppCompatActivity {
 
     Button returnHomeButton;
 
+    private String userName;
+    private String password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_successful);
+
+        Intent intent = getIntent();
+        userName = intent.getStringExtra("userName");
+        password = intent.getStringExtra("password");
 
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
@@ -28,8 +35,10 @@ public class paymentSuccessful extends AppCompatActivity {
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent (paymentSuccessful.this, MainActivity.class);
-            startActivity(intent);;
+            Intent returnHomeActivity = new Intent (paymentSuccessful.this, MainActivity.class);
+            returnHomeActivity.putExtra("userName", userName);
+            returnHomeActivity.putExtra("password", password);
+            startActivity(returnHomeActivity);;
         }
     };
 }

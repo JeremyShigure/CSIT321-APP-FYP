@@ -105,6 +105,8 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
         @Override
         public void onClick(View view) {
             Intent aboutUsActivity = new Intent(getActivity(), aboutUs.class);
+            aboutUsActivity.putExtra("userName", userName);
+            aboutUsActivity.putExtra("password", password);
             startActivity(aboutUsActivity);
         }
     };

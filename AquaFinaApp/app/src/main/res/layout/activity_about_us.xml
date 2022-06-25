@@ -18,6 +18,7 @@
         android:textColor="@color/white"
         android:textSize="30dp" />
 
+
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="700dp"
@@ -81,9 +82,22 @@
                 android:text="110 Orchard Rd S520419 14-10"
                 android:textColor="@color/black"
                 android:textSize="21sp" />
-        </RelativeLayout>
 
+            <Button
+                android:id="@+id/returnHomeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvOfficeAddr"
+                android:layout_marginTop="284dp"
+                android:text="Return to home page"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </Button>
+
+            </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
 
 </LinearLayout>

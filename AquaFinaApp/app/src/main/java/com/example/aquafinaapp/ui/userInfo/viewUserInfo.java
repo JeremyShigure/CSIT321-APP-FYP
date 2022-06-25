@@ -79,7 +79,6 @@ public class viewUserInfo extends AppCompatActivity {
         tvShowAddress.setText(showTvShowAddress);
         tvShowFullName.setText(showTvShowFullName);
 
-
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {

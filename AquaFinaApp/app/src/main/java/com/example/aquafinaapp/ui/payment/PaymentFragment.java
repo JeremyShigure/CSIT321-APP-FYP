@@ -25,12 +25,21 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
 
     private FragmentPaymentBinding binding;
 
+    private String userName;
+    private String password;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         PaymentViewModel dashboardViewModel = new ViewModelProvider(this).get(PaymentViewModel.class);
 
         binding = FragmentPaymentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        Intent intent = getActivity().getIntent();
+
+        Bundle bundle = getActivity().getIntent().getExtras();
+        userName = bundle.getString("userName");
+        password = bundle.getString("password");
 
         paymentButton = (Button) root.findViewById(R.id.paymentButton);
         paymentButton.setOnClickListener(this);
@@ -58,6 +67,8 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
                     public void onClick(DialogInterface arg0, int arg1) {
 //                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
                         Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
+                        paymentConfirm.putExtra("userName", userName);
+                        paymentConfirm.putExtra("password", password);
                         startActivity(paymentConfirm);
 //                        finish();
                         Toast.makeText(getActivity(), "Payment successfully", Toast.LENGTH_SHORT).show();
