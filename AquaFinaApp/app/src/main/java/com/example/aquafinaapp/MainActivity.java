@@ -3,6 +3,7 @@ package com.example.aquafinaapp;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.aquafinaapp.common.preferences;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +13,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.aquafinaapp.databinding.ActivityMainBinding;
+
+import java.sql.SQLOutput;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        preferences.putLogInStatus(getApplicationContext(), true);
+        preferences.putLoggedInUser(getApplicationContext(), userName);
+//        System.out.println("uuuuuuuuuuuusssssssssssseeeeeeeeeeerrrrrrrr" + userName);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

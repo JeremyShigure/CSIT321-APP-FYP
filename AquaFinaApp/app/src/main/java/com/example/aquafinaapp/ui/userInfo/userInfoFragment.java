@@ -37,8 +37,8 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
         View root = binding.getRoot();
 
         Intent intent = getActivity().getIntent();
-//        userName = intent.getStringExtra("userName");
-//        password = intent.getStringExtra("password");
+        userName = intent.getStringExtra("userName");
+        password = intent.getStringExtra("password");
 
 //        Bundle data = getArguments();
 //        if (data != null) {

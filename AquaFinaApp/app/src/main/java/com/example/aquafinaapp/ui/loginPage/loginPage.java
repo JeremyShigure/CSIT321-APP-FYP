@@ -74,7 +74,7 @@ public class loginPage extends AppCompatActivity {
             else if (customerController.checkUser(userName, password)) {
 
                 preferences.putLogInStatus(getApplicationContext(), true);
-                preferences.putLoggedInUser(getApplicationContext(), userName);
+                preferences.putLoggedInUser(getApplicationContext(), userName.toString());
 
                 Intent login = new Intent(loginPage.this, MainActivity.class);
 //                login.putExtra("userName", etUserName.getText().toString());
