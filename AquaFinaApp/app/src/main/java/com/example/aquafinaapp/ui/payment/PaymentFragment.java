@@ -44,8 +44,8 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
         paymentButton = (Button) root.findViewById(R.id.paymentButton);
         paymentButton.setOnClickListener(this);
 
-        final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textDashboard;
+//        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -58,23 +58,36 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        new AlertDialog.Builder(getActivity())
-                .setTitle("Please Check the payment amount?")
-                .setMessage("Payment price here")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface arg0, int arg1) {
-//                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
-                        Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
-                        paymentConfirm.putExtra("userName", userName);
-                        paymentConfirm.putExtra("password", password);
-                        startActivity(paymentConfirm);
-//                        finish();
-                        Toast.makeText(getActivity(), "Payment successfully", Toast.LENGTH_SHORT).show();
-                    }
+        // THIS WHOLE CHUNK IS THE DIALOG FOR PRESSING YES TO GO TO NEXT PAGE, AND NO TO REMAIN AT THIS PAGE
+        //-------------------------------------------------------------------------------------------------------------------------
+//
+//        new AlertDialog.Builder(getActivity())
+//                .setTitle("Please Check the payment amount?")
+//                .setMessage("Payment price here")
+//                .setNegativeButton(android.R.string.no, null)
+//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+//
+//                    public void onClick(DialogInterface arg0, int arg1) {
+////                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
+//                        Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
+//                        paymentConfirm.putExtra("userName", userName);
+//                        paymentConfirm.putExtra("password", password);
+//                        startActivity(paymentConfirm);
+////                        finish();
+//                        Toast.makeText(getActivity(), "Payment successfully", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                }).create().show();
+        //-------------------------------------------------------------------------------------------------------------------------
 
-                }).create().show();
+
+        // THE REAL CODE IS HERE ~~
+
+        Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
+        paymentConfirm.putExtra("userName", userName);
+        paymentConfirm.putExtra("password", password);
+        startActivity(paymentConfirm);
     }
 
 }

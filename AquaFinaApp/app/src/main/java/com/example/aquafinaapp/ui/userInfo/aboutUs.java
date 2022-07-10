@@ -1,11 +1,13 @@
 package com.example.aquafinaapp.ui.userInfo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
@@ -35,10 +37,30 @@ public class aboutUs extends AppCompatActivity {
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent returnHomeActivity = new Intent(aboutUs.this, MainActivity.class);
-            returnHomeActivity.putExtra("userName", userName);
-            returnHomeActivity.putExtra("password", password);
-            startActivity(returnHomeActivity);
+//            Intent returnHomeActivity = new Intent(aboutUs.this, getClass());
+
+
+
+
+            userInfoFragment myFrag = new userInfoFragment();
+
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            Bundle bundle = new Bundle();
+            bundle.putString("userName", userName);
+            bundle.putString("password", password);
+
+            myFrag.setArguments(bundle);
+
+            fragmentTransaction.replace(R.id.userInfoContainerFragment, myFrag).addToBackStack(userInfoFragment.class.getSimpleName()).commit();
+
+
+
+
+//            returnHomeActivity.putExtra("userName", userName);
+//            returnHomeActivity.putExtra("password", password);
+//            startActivity(returnHomeActivity);
 
         }
     };

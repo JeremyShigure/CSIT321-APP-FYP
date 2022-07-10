@@ -7,34 +7,17 @@
     tools:context=".ui.paymentSuccessful.paymentSuccessful">
 
     <TextView
-        android:id="@+id/tvPaymentSuccessful"
+        android:id="@+id/tvInvoiceWords"
         android:layout_width="197dp"
         android:layout_height="67dp"
         android:layout_marginTop="16dp"
-        android:text="Payment Successful!"
+        android:text="Invoice Page"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/tvPaymentAmmount"
-        android:layout_width="197dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="196dp"
-        android:text="$ Payment price here is paid successfully!"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentSuccessful">
-
     </TextView>
 
     <Button
@@ -46,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentAmmount"
+        app:layout_constraintTop_toBottomOf="@+id/tvInvoiceWords"
         app:layout_constraintVertical_bias="0.86">
 
     </Button>
