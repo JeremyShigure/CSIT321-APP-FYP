@@ -37,9 +37,7 @@ public class aboutUs extends AppCompatActivity {
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-//            Intent returnHomeActivity = new Intent(aboutUs.this, getClass());
-
-
+            Intent returnHomeActivity = new Intent(aboutUs.this, MainActivity.class);
 
 
             userInfoFragment myFrag = new userInfoFragment();
@@ -53,14 +51,14 @@ public class aboutUs extends AppCompatActivity {
 
             myFrag.setArguments(bundle);
 
-            fragmentTransaction.replace(R.id.userInfoContainerFragment, myFrag).addToBackStack(userInfoFragment.class.getSimpleName()).commit();
+//            fragmentTransaction.replace(R.id.navigation_userInfo, myFrag).addToBackStack(userInfoFragment.class.getSimpleName()).commit();
 
+            myFrag.setArguments(bundle);
+            returnHomeActivity.putExtras(bundle);
 
-
-
-//            returnHomeActivity.putExtra("userName", userName);
-//            returnHomeActivity.putExtra("password", password);
-//            startActivity(returnHomeActivity);
+            returnHomeActivity.putExtra("userName", userName);
+            returnHomeActivity.putExtra("password", password);
+            startActivity(returnHomeActivity);
 
         }
     };

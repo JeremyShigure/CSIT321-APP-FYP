@@ -87,10 +87,10 @@ public class loginPage extends AppCompatActivity {
                 bundle.putString("userName", etUserName.getText().toString());
                 bundle.putString("password", etPassword.getText().toString());
 
-                userInfoFragment myFrag = new userInfoFragment();
+                userInfoFragment userInfoFrag = new userInfoFragment();
 
-                myFrag.setArguments(bundle);
-//                fragmentTransaction.replace(R.id.navigation_userInfo).commit();
+                userInfoFrag.setArguments(bundle);
+//                fragmentTransaction.replace(R.id.).commit();
 
                 login.putExtras(bundle);
                 startActivity(login);

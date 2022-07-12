@@ -1,5 +1,6 @@
 package com.example.aquafinaapp.Entity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -202,6 +203,28 @@ public class customer extends SQLiteOpenHelper {
         return res;
     }
 
+
+    public boolean updateCustomerInfo(String cUsername, String cPassword, String cContact, String cEmail) {
+
+        SQLiteDatabase db = openDatabase();
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("cContact", cContact);
+        contentValues.put("cEmail", cEmail);
+        contentValues.put("cPassword", cPassword);
+
+        //db.update(Role, contentValues, "userName = ? and roles = ? and password = ?", new String[]{Username, Role, Password});
+
+        //If insert fails, its gonna return -1 to us
+
+        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+        if(result == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
 
 }

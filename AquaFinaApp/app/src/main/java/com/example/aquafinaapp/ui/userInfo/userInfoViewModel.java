@@ -10,7 +10,7 @@ public class userInfoViewModel extends ViewModel {
 
     public userInfoViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("User Information");
+//        mText.setValue("User Information");
     }
 
     public LiveData<String> getText() {

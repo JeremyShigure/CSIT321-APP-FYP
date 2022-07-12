@@ -43,4 +43,15 @@ public class customerController extends AppCompatActivity {
         return res;
     }
 
+    public boolean updateCustomerInfo(String cUsername, String cPassword, String cContact, String cEmail) {
+        boolean isValidate = customer.updateCustomerInfo(cUsername, cPassword, cContact, cEmail);
+
+        if (isValidate) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }

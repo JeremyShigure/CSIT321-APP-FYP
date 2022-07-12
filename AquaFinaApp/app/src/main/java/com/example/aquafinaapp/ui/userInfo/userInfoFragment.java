@@ -40,15 +40,17 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
         userName = intent.getStringExtra("userName");
         password = intent.getStringExtra("password");
 
-//        Bundle data = getArguments();
-//        if (data != null) {
-//            userName = data.getString("userName");
-//            password = data.getString("password");
-//        }
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            userName = bundle.getString("userName");
+            password = bundle.getString("password");
+        }
 
-        Bundle bundle = getActivity().getIntent().getExtras();
-        userName = bundle.getString("userName");
-        password = bundle.getString("password");
+//        Bundle bundle = getActivity().getIntent().getExtras();
+
+//        Bundle bundle = getArguments();
+//        userName = bundle.getString("userName");
+//        password = bundle.getString("password");
 
         viewUserInfoButton = (Button) root.findViewById(R.id.viewUserInfoButton);
         aboutUsInfoButton = (Button) root.findViewById(R.id.aboutUsInfoButton);

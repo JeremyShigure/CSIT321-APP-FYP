@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.aquafinaapp.Controller.customerController;
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 
 public class updateUserInfo extends AppCompatActivity {
+
+    customerController customerController = new customerController();
 
     EditText etContactNo, etEmail, etAddress, etPassword, etConfirmPassword;
     Button returnHomeButton;
@@ -38,20 +42,38 @@ public class updateUserInfo extends AppCompatActivity {
         returnHomeButton.setOnClickListener(updateAndReturnHome);
 
 
-
     }
 
 
     private View.OnClickListener updateAndReturnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
-            updateAndReturnHomeActivity.putExtra("userName", userName);
-            updateAndReturnHomeActivity.putExtra("password", password);
-            startActivity(updateAndReturnHomeActivity);
+            if (etContactNo.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty()|| etConfirmPassword.getText().toString().isEmpty()) {
+                Toast.makeText(updateUserInfo.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+            }
+            else if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
+                Toast.makeText(updateUserInfo.this, "Please make sure passwords are same!", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                boolean check = customerController.updateCustomerInfo(userName, etPassword.getText().toString(), etContactNo.getText().toString(), etEmail.getText().toString());
+
+                if (check) {
+                    Toast.makeText(updateUserInfo.this, "Update successfully \nand return to home page", Toast.LENGTH_SHORT).show();
+                    Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
+                    updateAndReturnHomeActivity.putExtra("userName", userName);
+                    updateAndReturnHomeActivity.putExtra("password", password);
+                    startActivity(updateAndReturnHomeActivity);
+                }
+                else {
+                    Toast.makeText(updateUserInfo.this, "Update Failed!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+//            Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
+//            updateAndReturnHomeActivity.putExtra("userName", userName);
+//            updateAndReturnHomeActivity.putExtra("password", password);
+//            startActivity(updateAndReturnHomeActivity);
         }
     };
-
-
 
 }
