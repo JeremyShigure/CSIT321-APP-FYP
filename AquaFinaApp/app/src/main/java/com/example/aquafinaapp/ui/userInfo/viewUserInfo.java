@@ -96,7 +96,7 @@ public class viewUserInfo extends AppCompatActivity {
     private View.OnClickListener updateUserInfo = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent updateUserInfoActivity = new Intent(viewUserInfo.this, updateUserInfo.class);
+            Intent updateUserInfoActivity = new Intent(viewUserInfo.this, updateCustomerOptions.class);
             updateUserInfoActivity.putExtra("userName", userName);
             updateUserInfoActivity.putExtra("password", password);
             startActivity(updateUserInfoActivity);

@@ -38,13 +38,8 @@ public class customerController extends AppCompatActivity {
         }
     }
 
-    public Cursor viewUserInfo(String userName, String password) {
-        Cursor res = customer.viewUserInfo(userName, password);
-        return res;
-    }
-
-    public boolean updateCustomerInfo(String cUsername, String cPassword, String cContact, String cEmail, String newPassword) {
-        boolean isValidate = customer.updateCustomerInfo(cUsername, cPassword, cContact, cEmail, newPassword);
+    public boolean updateCustomerContact(String cUsername, String cPassword, String cContact) {
+        boolean isValidate = customer.updateCustomerContact(cUsername, cPassword, cContact);
 
         if (isValidate) {
             return true;
@@ -52,6 +47,33 @@ public class customerController extends AppCompatActivity {
         else {
             return false;
         }
+    }
+
+    public boolean updateCustomerEmail(String cUsername, String cPassword, String cEmail) {
+        boolean isValidate = customer.updateCustomerEmail(cUsername, cPassword, cEmail);
+
+        if (isValidate) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean updateCustomerPassword(String cUsername, String cPassword, String newPassword) {
+        boolean isValidate = customer.updateCustomerPassword(cUsername, cPassword, newPassword);
+
+        if (isValidate) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public Cursor viewUserInfo(String userName, String password) {
+        Cursor res = customer.viewUserInfo(userName, password);
+        return res;
     }
 
 }

@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AquaFinaApp">
         <activity
-            android:name=".ui.userInfo.aboutUs"
+            android:name=".ui.userInfo.updateCustomerOptions"
             android:exported="false" />
         <activity
-            android:name=".ui.userInfo.updateUserInfo"
+            android:name=".ui.userInfo.updateCustomerPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userInfo.updateCustomerEmail"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userInfo.updateCustomerContact"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userInfo.aboutUs"
             android:exported="false" />
         <activity
             android:name=".ui.userInfo.viewUserInfo"
