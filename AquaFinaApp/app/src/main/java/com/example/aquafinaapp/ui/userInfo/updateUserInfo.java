@@ -65,7 +65,7 @@ public class updateUserInfo extends AppCompatActivity {
                     Toast.makeText(updateUserInfo.this, "Update successfully \nand return to home page", Toast.LENGTH_SHORT).show();
                     Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
                     updateAndReturnHomeActivity.putExtra("userName", userName);
-                    updateAndReturnHomeActivity.putExtra("password", password);
+                    updateAndReturnHomeActivity.putExtra("password", etConfirmPassword.getText().toString());
                     startActivity(updateAndReturnHomeActivity);
                 }
                 else {
