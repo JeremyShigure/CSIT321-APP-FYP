@@ -204,16 +204,15 @@ public class customer extends SQLiteOpenHelper {
     }
 
 
-    public boolean updateCustomerInfo(String cUsername, String cPassword, String cContact, String cEmail) {
+    public boolean updateCustomerInfo(String cUsername, String cPassword, String cContact, String cEmail, String newPassword) {
 
         SQLiteDatabase db = openDatabase();
 
         ContentValues contentValues = new ContentValues();
+
         contentValues.put("cContact", cContact);
         contentValues.put("cEmail", cEmail);
-        contentValues.put("cPassword", cPassword);
-
-        //db.update(Role, contentValues, "userName = ? and roles = ? and password = ?", new String[]{Username, Role, Password});
+        contentValues.put("cPassword", newPassword);
 
         //If insert fails, its gonna return -1 to us
 

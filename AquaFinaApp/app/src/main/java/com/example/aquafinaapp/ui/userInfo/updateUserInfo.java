@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,8 +55,11 @@ public class updateUserInfo extends AppCompatActivity {
             else if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
                 Toast.makeText(updateUserInfo.this, "Please make sure passwords are same!", Toast.LENGTH_SHORT).show();
             }
+            else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
+                Toast.makeText(updateUserInfo.this, "Please make sure \nemail format is correct!", Toast.LENGTH_SHORT).show();
+            }
             else {
-                boolean check = customerController.updateCustomerInfo(userName, etPassword.getText().toString(), etContactNo.getText().toString(), etEmail.getText().toString());
+                boolean check = customerController.updateCustomerInfo(userName, password, etContactNo.getText().toString(), etEmail.getText().toString(), etConfirmPassword.getText().toString());
 
                 if (check) {
                     Toast.makeText(updateUserInfo.this, "Update successfully \nand return to home page", Toast.LENGTH_SHORT).show();
