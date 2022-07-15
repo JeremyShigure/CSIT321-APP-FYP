@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.paymentSuccessful.viewPaymentDetails">
+    tools:context=".ui.payment.billDetails">
 
     <TextView
         android:id="@+id/tvInvoiceWords"
         android:layout_width="197dp"
         android:layout_height="67dp"
         android:layout_marginTop="16dp"
-        android:text="Invoice Page"
+        android:text="Bill Details Page"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -33,6 +33,5 @@
         app:layout_constraintVertical_bias="0.86">
 
     </Button>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

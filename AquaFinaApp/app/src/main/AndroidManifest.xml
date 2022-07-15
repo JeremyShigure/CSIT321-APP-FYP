@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AquaFinaApp">
         <activity
+            android:name=".ui.payment.billDetails"
+            android:exported="false" />
+        <activity
             android:name=".ui.userInfo.updateCustomerOptions"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.paymentSuccessful.paymentSuccessful"
+            android:name=".ui.paymentSuccessful.viewPaymentDetails"
             android:exported="false" />
         <activity
             android:name=".ui.loginPage.loginPage"

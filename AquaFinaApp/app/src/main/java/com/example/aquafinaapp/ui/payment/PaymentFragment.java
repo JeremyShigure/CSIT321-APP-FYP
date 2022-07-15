@@ -1,27 +1,24 @@
 package com.example.aquafinaapp.ui.payment;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.databinding.FragmentPaymentBinding;
-import com.example.aquafinaapp.ui.paymentSuccessful.paymentSuccessful;
+import com.example.aquafinaapp.ui.paymentSuccessful.viewPaymentDetails;
+import com.example.aquafinaapp.ui.userInfo.viewUserInfo;
 
-public class PaymentFragment extends Fragment implements View.OnClickListener {
+public class PaymentFragment extends Fragment {
 
-    Button paymentButton;
+    Button btnViewInvoice, btnBillDetails;
 
     private FragmentPaymentBinding binding;
 
@@ -41,8 +38,11 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
         userName = bundle.getString("userName");
         password = bundle.getString("password");
 
-        paymentButton = (Button) root.findViewById(R.id.paymentButton);
-        paymentButton.setOnClickListener(this);
+        btnViewInvoice = (Button) root.findViewById(R.id.btnViewInvoice);
+        btnViewInvoice.setOnClickListener(viewInvoice);
+
+        btnBillDetails = (Button) root.findViewById(R.id.btnBillDetails);
+        btnBillDetails.setOnClickListener(billDetails);
 
 //        final TextView textView = binding.textDashboard;
 //        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
@@ -55,8 +55,30 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
         binding = null;
     }
 
-    @Override
-    public void onClick(View view) {
+    private View.OnClickListener viewInvoice = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent viewInvoiceActivity = new Intent(getActivity(), viewPaymentDetails.class);
+            viewInvoiceActivity.putExtra("userName", userName);
+            viewInvoiceActivity.putExtra("password", password);
+            startActivity(viewInvoiceActivity);
+        }
+    };
+
+
+    private View.OnClickListener billDetails = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent billDetailsActivity = new Intent(getActivity(), billDetails.class);
+            billDetailsActivity.putExtra("userName", userName);
+            billDetailsActivity.putExtra("password", password);
+            startActivity(billDetailsActivity);
+        }
+    };
+
+//
+//    @Override
+//    public void onClick(View view) {
 
 
         // THIS WHOLE CHUNK IS THE DIALOG FOR PRESSING YES TO GO TO NEXT PAGE, AND NO TO REMAIN AT THIS PAGE
@@ -84,10 +106,10 @@ public class PaymentFragment extends Fragment implements View.OnClickListener {
 
         // THE REAL CODE IS HERE ~~
 
-        Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
-        paymentConfirm.putExtra("userName", userName);
-        paymentConfirm.putExtra("password", password);
-        startActivity(paymentConfirm);
-    }
+//        Intent paymentConfirm = new Intent(getActivity(), viewPaymentDetails.class);
+//        paymentConfirm.putExtra("userName", userName);
+//        paymentConfirm.putExtra("password", password);
+//        startActivity(paymentConfirm);
+//    }
 
 }

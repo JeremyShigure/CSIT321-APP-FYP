@@ -18,7 +18,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.databinding.FragmentUserInfoBinding;
 import com.example.aquafinaapp.ui.loginPage.loginPage;
-import com.example.aquafinaapp.ui.paymentSuccessful.paymentSuccessful;
 
 public class userInfoFragment extends Fragment implements View.OnClickListener{
 
