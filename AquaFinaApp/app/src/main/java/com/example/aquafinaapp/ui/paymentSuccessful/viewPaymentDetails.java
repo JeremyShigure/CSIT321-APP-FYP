@@ -31,7 +31,6 @@ public class viewPaymentDetails extends AppCompatActivity {
 
     }
 
-
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

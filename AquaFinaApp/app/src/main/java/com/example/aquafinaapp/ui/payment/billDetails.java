@@ -37,7 +37,7 @@ public class billDetails extends AppCompatActivity {
             Intent returnHomeActivity = new Intent (billDetails.this, MainActivity.class);
             returnHomeActivity.putExtra("userName", userName);
             returnHomeActivity.putExtra("password", password);
-            startActivity(returnHomeActivity);;
+            startActivity(returnHomeActivity);
         }
     };
 }

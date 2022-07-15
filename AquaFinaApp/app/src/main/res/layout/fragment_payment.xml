@@ -1,55 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.payment.PaymentFragment">
 
-    <TextView
-        android:id="@+id/tvPaymentPageWords"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/aquafinarect"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:background="#C1C1C1"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:text="Payment Page"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginLeft="17sp"
+        android:layout_marginRight="17sp"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tvPaymentPageWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="My Bills"
+            android:textColor="@color/black"
+            android:textSize="33sp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/bungee"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Here are your bills."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/opensans_reg"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:background="#C1C1C1"/>
+
+
+    <TextView
+        android:id="@+id/tvInvoiceNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="15dp"
+        android:text="Invoice No: 123456S"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Total Amount"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_reg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvDollarSign"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="17dp"
+            android:gravity="center"
+            android:text="$"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opensans_bold"/>
+
+        <TextView
+            android:id="@+id/tvBillAmount"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@+id/tvDollarSign"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="center|left|left"
+            android:text="134.178"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <Button
+            android:id="@+id/btnBillDetails"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/tvBillAmount"
+            android:backgroundTint="@color/navy_blue"
+            app:icon="@drawable/ic_baseline_chevron_right_24" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="410dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="#C1C1C1"/>
 
     <Button
         android:id="@+id/btnViewInvoice"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="View Invoice"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPaymentPageWords"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_marginTop="15dp"
+        android:text="View All Invoices"
+        android:backgroundTint="@color/navy_blue"/>
 
-    </Button>
-
-    <Button
-        android:id="@+id/btnBillDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="Bill Details"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnViewInvoice"
-        app:layout_constraintVertical_bias="0.0">
-
-    </Button>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

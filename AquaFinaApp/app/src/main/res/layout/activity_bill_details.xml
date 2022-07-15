@@ -1,37 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.payment.billDetails">
+    tools:context=".ui.paymentSuccessful.paymentSuccessful"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvInvoiceWords"
-        android:layout_width="197dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="16dp"
-        android:text="Bill Details Page"
-        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:includeFontPadding="false"
+        android:text="My Bill Details"
+        android:textSize="33sp"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </TextView>
+        android:fontFamily="@font/bungee"/>
+
+    <View
+        android:layout_width="410dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@color/light_gray"/>
+
+    <TextView
+        android:id="@+id/tvInvoiceNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Invoice No: 123456S"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvBillWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="Bill Cycle: "
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"/>
+
+        <TextView
+            android:id="@+id/tvStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Jul 2022"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"
+            android:layout_toRightOf="@+id/tvBillWords"/>
+
+        <TextView
+            android:id="@+id/tvStartEndDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"
+            android:layout_toRightOf="@+id/tvStartDate"/>
+
+        <TextView
+            android:id="@+id/tvEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 Aug 2022"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"
+            android:layout_toRightOf="@+id/tvStartEndDash"/>
+
+        <View
+            android:id="@+id/viewS2"
+            android:layout_width="410dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@color/light_gray"
+            android:layout_below="@+id/tvEndDate"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- water meter id -->
+        <TextView
+            android:id="@+id/tvDetail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="17dp"
+            android:fontFamily="@font/opensans_reg"
+            android:text="Water Meter ID - "
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvWaterMeterID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"
+            android:layout_toRightOf="@id/tvDetail1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <!-- nett amount -->
+        <TextView
+            android:id="@+id/tvDetail2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:fontFamily="@font/opensans_reg"
+            android:text="Current Charges"
+            android:textColor="@color/dark_gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDetail2.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@id/tvDetail2"/>
+
+        <TextView
+            android:id="@+id/tvNettAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="125.40"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@id/tvDetail2"
+            android:gravity="right"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <!-- gst  -->
+        <TextView
+            android:id="@+id/tvDetail3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="GST"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg"/>
+
+        <TextView
+            android:id="@+id/tvDetail3.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@id/tvDetail3" />
+
+        <TextView
+            android:id="@+id/tvGST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.778"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@id/tvDetail3.1"
+            android:gravity="right"/>
+
+
+    </RelativeLayout>
+
+    <!-- total amount -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvDetail4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text="Total Charges"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_reg" />
+
+        <TextView
+            android:id="@+id/tvDetail4.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@id/tvDetail4"/>
+
+        <TextView
+            android:id="@+id/tvTotalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="134.178"
+            android:textSize="15sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_toRightOf="@+id/tvDetail4.1" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/returnHomeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Return to Home Page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInvoiceWords"
-        app:layout_constraintVertical_bias="0.86">
+        android:backgroundTint="@color/navy_blue">
 
     </Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
