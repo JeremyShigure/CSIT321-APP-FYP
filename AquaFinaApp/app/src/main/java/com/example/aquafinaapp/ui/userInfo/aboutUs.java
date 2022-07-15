@@ -1,9 +1,11 @@
 package com.example.aquafinaapp.ui.userInfo;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -11,10 +13,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
+import com.example.aquafinaapp.ui.payment.billDetails;
 
 public class aboutUs extends AppCompatActivity {
 
     Button returnHomeButton;
+    TextView tvOfficeNum;
 
     private String userName;
     private String password;
@@ -28,10 +32,12 @@ public class aboutUs extends AppCompatActivity {
         userName = intent.getStringExtra("userName");
         password = intent.getStringExtra("password");
 
-        returnHomeButton = findViewById(R.id.returnHomeButton);
-
+        returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
+
+        tvOfficeNum = (TextView) findViewById(R.id.tvOfficeNum);
+        tvOfficeNum.setOnClickListener(phoneCall);
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
@@ -60,6 +66,18 @@ public class aboutUs extends AppCompatActivity {
             returnHomeActivity.putExtra("password", password);
             startActivity(returnHomeActivity);
 
+        }
+    };
+
+    private View.OnClickListener phoneCall = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent phoneCallActivity = new Intent(Intent.ACTION_DIAL);
+            phoneCallActivity.setData(Uri.parse("tel:68302991"));
+
+            phoneCallActivity.putExtra("userName", userName);
+            phoneCallActivity.putExtra("password", password);
+            startActivity(phoneCallActivity);
         }
     };
 
