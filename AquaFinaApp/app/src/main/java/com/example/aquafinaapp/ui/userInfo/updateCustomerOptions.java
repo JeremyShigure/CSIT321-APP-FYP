@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.aquafinaapp.MainActivity;
@@ -17,7 +18,7 @@ public class updateCustomerOptions extends AppCompatActivity {
     private String userName;
     private String password;
 
-    Button btnUpdateCustomerContactNo, btnUpdateCustomerEmail, btnUpdateCustomerPassword;
+    TextView btnUpdateCustomerContactNo, btnUpdateCustomerEmail, btnUpdateCustomerPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +29,9 @@ public class updateCustomerOptions extends AppCompatActivity {
         userName = intent.getStringExtra("userName");
         password = intent.getStringExtra("password");
 
-        btnUpdateCustomerContactNo = (Button) findViewById(R.id.btnUpdateCustomerContactNo);
-        btnUpdateCustomerEmail = (Button) findViewById(R.id.btnUpdateCustomerEmail);
-        btnUpdateCustomerPassword = (Button) findViewById(R.id.btnUpdateCustomerPassword);
+        btnUpdateCustomerContactNo = (TextView) findViewById(R.id.btnUpdateCustomerContactNo);
+        btnUpdateCustomerEmail = (TextView) findViewById(R.id.btnUpdateCustomerEmail);
+        btnUpdateCustomerPassword = (TextView) findViewById(R.id.btnUpdateCustomerPassword);
 
         btnUpdateCustomerContactNo.setOnClickListener(updateContactNo);
         btnUpdateCustomerEmail.setOnClickListener(updateEmail);

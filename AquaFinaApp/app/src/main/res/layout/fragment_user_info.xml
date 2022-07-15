@@ -1,64 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/userInfoContainerFragment"
-    tools:context=".ui.userInfo.userInfoFragment">
+    tools:context=".ui.userInfo.userInfoFragment"
+    android:orientation="vertical"
+    android:background="@color/dark_blue">
 
-
-    <Button
-        android:id="@+id/viewUserInfoButton"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="200dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="Manage Profile"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:fontFamily="@font/robotoregular"
-        app:backgroundTint="#B0B0B0"
-        app:icon="@drawable/ic_baseline_supervised_user_circle_24"
-        app:iconSize="50dp"
-        android:gravity="left|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/aboutUsInfoButton"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="contact us"
-        android:fontFamily="@font/robotoregular"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:backgroundTint="#B0B0B0"
-        app:icon="@drawable/ic_baseline_info_24"
-        app:iconSize="50dp"
-        android:gravity="left|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewUserInfoButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bungee"
+            android:text="settings"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/logoutButton"
+    <!-- View Profile -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:backgroundTint="#0047ab"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutUsInfoButton"
-        app:layout_constraintVertical_bias="0.25"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/viewProfileIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_4"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_person_24" />
+
+            <TextView
+                android:id="@+id/viewUserInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/viewProfileIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="View Profile"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Contact Us -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/contactUsIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_4"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_question_answer_24" />
+
+            <TextView
+                android:id="@+id/aboutUsInfoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/contactUsIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Contact Us"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Logout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logoutIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_3"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_power_settings_new_24" />
+
+            <TextView
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/logoutIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+<!--    <Button-->
+<!--        android:id="@+id/viewUserInfoButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:background="#FAF8F8"-->
+<!--        android:backgroundTint="#E6A08A"-->
+<!--        android:text="Manage Profile"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        app:backgroundTint="#B0B0B0"-->
+<!--        app:icon="@drawable/ic_baseline_supervised_user_circle_24"-->
+<!--        app:iconSize="50dp"-->
+<!--        android:gravity="left|center_vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/aboutUsInfoButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:background="#FAF8F8"-->
+<!--        android:backgroundTint="#E6A08A"-->
+<!--        android:text="contact us"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        app:backgroundTint="#B0B0B0"-->
+<!--        app:icon="@drawable/ic_baseline_info_24"-->
+<!--        app:iconSize="50dp"-->
+<!--        android:gravity="left|center_vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/viewUserInfoButton" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/logoutButton"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Logout"-->
+<!--        android:backgroundTint="#0047ab"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/aboutUsInfoButton"-->
+<!--        app:layout_constraintVertical_bias="0.25"/>-->
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

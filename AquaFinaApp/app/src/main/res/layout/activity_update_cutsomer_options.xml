@@ -1,90 +1,217 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.userInfo.updateCustomerOptions">
+    tools:context=".ui.userInfo.updateCustomerOptions"
+    android:orientation="vertical"
+    android:background="@color/dark_blue">
 
-    <TextView
-        android:id="@+id/tvUpdateWords"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bungee"
+            android:text="OPTIONS"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile_icon"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!-- Update Contact -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Please choose the particular that \nyou wish to update"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
 
-    </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/updateContactIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_1"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_phone_android_24" />
 
-    <Button
-        android:id="@+id/btnUpdateCustomerContactNo"
+            <TextView
+                android:id="@+id/btnUpdateCustomerContactNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/updateContactIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Update Contact"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Update Email -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="200dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="Update Contact Number"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:fontFamily="@font/robotoregular"
-        app:backgroundTint="#B0B0B0"
-        app:icon="@drawable/ic_baseline_supervised_user_circle_24"
-        app:iconSize="50dp"
-        android:gravity="left|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateWords"  >
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
 
-    </Button>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnUpdateCustomerEmail"
+            <ImageView
+                android:id="@+id/updateEmailIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_1"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_email_24" />
+
+            <TextView
+                android:id="@+id/btnUpdateCustomerEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/updateEmailIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Update Email"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Update Password -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="Update Email"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:fontFamily="@font/robotoregular"
-        app:backgroundTint="#B0B0B0"
-        app:icon="@drawable/ic_baseline_supervised_user_circle_24"
-        app:iconSize="50dp"
-        android:gravity="left|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdateCustomerContactNo"  >
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_back">
 
-    </Button>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnUpdateCustomerPassword"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="30dp"
-        android:background="#FAF8F8"
-        android:backgroundTint="#E6A08A"
-        android:text="Update Password"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:fontFamily="@font/robotoregular"
-        app:backgroundTint="#B0B0B0"
-        app:icon="@drawable/ic_baseline_supervised_user_circle_24"
-        app:iconSize="50dp"
-        android:gravity="left|center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpdateCustomerEmail" >
+            <ImageView
+                android:id="@+id/updatePasswordIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_1"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_safety_check_24" />
 
-    </Button>
+            <TextView
+                android:id="@+id/btnUpdateCustomerPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/updatePasswordIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Update Password"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
+        </RelativeLayout>
 
+    </LinearLayout>
+    <!--    <Button-->
+<!--        android:id="@+id/btnUpdateCustomerContactNo"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:background="#FAF8F8"-->
+<!--        android:backgroundTint="#E6A08A"-->
+<!--        android:text="Update Contact Number"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        app:backgroundTint="#B0B0B0"-->
+<!--        app:icon="@drawable/ic_baseline_supervised_user_circle_24"-->
+<!--        app:iconSize="50dp"-->
+<!--        android:gravity="left|center_vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvUpdateWords"  >-->
 
+<!--    </Button>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <Button-->
+<!--        android:id="@+id/btnUpdateCustomerEmail"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="#FAF8F8"-->
+<!--        android:backgroundTint="#E6A08A"-->
+<!--        android:text="Update Email"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        app:backgroundTint="#B0B0B0"-->
+<!--        app:icon="@drawable/ic_baseline_supervised_user_circle_24"-->
+<!--        app:iconSize="50dp"-->
+<!--        android:gravity="left|center_vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnUpdateCustomerContactNo"  >-->
+
+<!--    </Button>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnUpdateCustomerPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="#FAF8F8"-->
+<!--        android:backgroundTint="#E6A08A"-->
+<!--        android:text="Update Password"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:fontFamily="@font/robotoregular"-->
+<!--        app:backgroundTint="#B0B0B0"-->
+<!--        app:icon="@drawable/ic_baseline_supervised_user_circle_24"-->
+<!--        app:iconSize="50dp"-->
+<!--        android:gravity="left|center_vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnUpdateCustomerEmail" >-->
+
+<!--    </Button>-->
+
+</LinearLayout>

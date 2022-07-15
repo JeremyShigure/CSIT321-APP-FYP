@@ -30,8 +30,8 @@ public class updateCustomerContact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer_contact);
 
-        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
-        tvContactNoHints = (TextView)findViewById(R.id.tvContactNoHints);
+//        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
+//        tvContactNoHints = (TextView)findViewById(R.id.tvContactNoHints);
         tvContactNo = (TextView)findViewById(R.id.tvContactNo);
 
         Intent intent = getIntent();

@@ -31,8 +31,8 @@ public class updateCustomerEmail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer_email);
 
-        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
-        tvEmailHints = (TextView)findViewById(R.id.tvEmailHints);
+//        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
+//        tvEmailHints = (TextView)findViewById(R.id.tvEmailHints);
         tvEmail = (TextView)findViewById(R.id.tvEmail);
 
         Intent intent = getIntent();

@@ -21,7 +21,7 @@ import com.example.aquafinaapp.ui.loginPage.loginPage;
 
 public class userInfoFragment extends Fragment implements View.OnClickListener{
 
-    Button viewUserInfoButton, aboutUsInfoButton, logoutButton;
+    TextView viewUserInfoButton, aboutUsInfoButton, logoutButton;
 
     private FragmentUserInfoBinding binding;
 
@@ -51,9 +51,9 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
 //        userName = bundle.getString("userName");
 //        password = bundle.getString("password");
 
-        viewUserInfoButton = (Button) root.findViewById(R.id.viewUserInfoButton);
-        aboutUsInfoButton = (Button) root.findViewById(R.id.aboutUsInfoButton);
-        logoutButton = (Button) root.findViewById(R.id.logoutButton);
+        viewUserInfoButton = (TextView) root.findViewById(R.id.viewUserInfoButton);
+        aboutUsInfoButton = (TextView) root.findViewById(R.id.aboutUsInfoButton);
+        logoutButton = (TextView) root.findViewById(R.id.logoutButton);
 
         viewUserInfoButton.setOnClickListener(viewUserInfo);
         aboutUsInfoButton.setOnClickListener(aboutUs);

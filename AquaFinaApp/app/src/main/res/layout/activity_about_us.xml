@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.userInfo.aboutUs"
-    android:background="#6495ED"
+    android:background="@color/dark_blue"
     android:orientation="vertical">
 
     <TextView
@@ -19,85 +19,165 @@
         android:textSize="30dp" />
 
 
-    <com.google.android.material.card.MaterialCardView
+    <TextView
+        android:id="@+id/tvContactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserratreg"
+        android:text="Want to get in touch? We'd love to hear from you. Here's how you can reach us!"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="65dp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_back"
+        android:orientation="vertical"
+        android:padding="15dp">
 
+        <!-- Office Number -->
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvContactUs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratreg"
-                android:text="Want to get in touch? We'd love to hear from you. Here's how you can reach us!"
-                android:textColor="#8F8F8F"
-                android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/updateContactIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_2"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_local_phone_24" />
 
             <TextView
                 android:id="@+id/tvOfficeNum"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tvContactUs"
-                android:layout_marginTop="35dp"
-                android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/montserratreg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/updateContactIcon"
+                android:fontFamily="@font/opensans_bold"
                 android:text="68302991"
-                android:textColor="@color/black"
-                android:textSize="21sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <!-- Office Email -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/officeEmailIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_2"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_email_24" />
 
             <TextView
-                android:id="@+id/tvOfficeEmail"
-                android:layout_width="match_parent"
+                android:id="@+id/officeEmail"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvOfficeNum"
-                android:layout_marginTop="35dp"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/montserratreg"
-                android:text="admin@aquafina.com"
-                android:textColor="@color/black"
-                android:textSize="21sp" />
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/officeEmailIcon"
+                android:fontFamily="@font/opensans_bold"
+                android:text="aquafina_supply@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <!-- Office Address -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/officeAddressIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/round_icon_2"
+                android:padding="9dp"
+                android:src="@drawable/ic_baseline_location_on_24" />
 
             <TextView
-                android:id="@+id/tvOfficeAddr"
-                android:layout_width="match_parent"
+                android:id="@+id/officeAddress"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvOfficeEmail"
-                android:layout_marginTop="35dp"
-                android:drawableLeft="@drawable/ic_baseline_location_on_24"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/montserratreg"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/officeAddressIcon"
+                android:fontFamily="@font/opensans_bold"
                 android:text="110 Orchard Rd S520419 14-10"
-                android:textColor="@color/black"
-                android:textSize="21sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/returnHomeButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvOfficeAddr"
-                android:layout_marginTop="200dp"
-                android:text="Return to home page"
-                android:textColor="@color/black"
-                android:textSize="20dp">
+        </RelativeLayout>
 
-            </Button>
+    </LinearLayout>
 
-            </RelativeLayout>
+    <Button
+        android:id="@+id/returnHomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/navy_blue"
+        android:text="Return to home page"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:fontFamily="@font/opensans_reg">
 
-    </com.google.android.material.card.MaterialCardView>
+    </Button>
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvOfficeNum"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@id/tvContactUs"-->
+    <!--                android:layout_marginTop="35dp"-->
+    <!--                android:drawableLeft="@drawable/ic_baseline_local_phone_24"-->
+    <!--                android:drawablePadding="10dp"-->
+    <!--                android:fontFamily="@font/montserratreg"-->
+    <!--                android:text="68302991"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="21sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvOfficeEmail"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@+id/tvOfficeNum"-->
+    <!--                android:layout_marginTop="35dp"-->
+    <!--                android:drawableLeft="@drawable/ic_baseline_email_24"-->
+    <!--                android:drawablePadding="10dp"-->
+    <!--                android:fontFamily="@font/montserratreg"-->
+    <!--                android:text="admin@aquafina.com"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="21sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvOfficeAddr"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_below="@+id/tvOfficeEmail"-->
+    <!--                android:layout_marginTop="35dp"-->
+    <!--                android:drawableLeft="@drawable/ic_baseline_location_on_24"-->
+    <!--                android:drawablePadding="10dp"-->
+    <!--                android:fontFamily="@font/montserratreg"-->
+    <!--                android:text="110 Orchard Rd S520419 14-10"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="21sp" />-->
+
+
 
 
 </LinearLayout>

@@ -31,8 +31,8 @@ public class updateCustomerPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer_password);
 
-        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
-        tvPasswordHints = (TextView)findViewById(R.id.tvPasswordHints);
+//        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
+//        tvPasswordHints = (TextView)findViewById(R.id.tvPasswordHints);
         tvEmail = (TextView)findViewById(R.id.tvEmail);
 
         Intent intent = getIntent();
