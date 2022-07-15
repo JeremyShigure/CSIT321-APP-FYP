@@ -38,10 +38,10 @@ public class PaymentFragment extends Fragment {
         userName = bundle.getString("userName");
         password = bundle.getString("password");
 
-        btnViewInvoice = (Button) root.findViewById(R.id.btnViewInvoice);
+        btnViewInvoice = root.findViewById(R.id.btnViewInvoice);
         btnViewInvoice.setOnClickListener(viewInvoice);
 
-        btnBillDetails = (Button) root.findViewById(R.id.btnBillDetails);
+        btnBillDetails = root.findViewById(R.id.btnBillDetails);
         btnBillDetails.setOnClickListener(billDetails);
 
 //        final TextView textView = binding.textDashboard;
