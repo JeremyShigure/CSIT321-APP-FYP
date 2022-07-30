@@ -73,6 +73,25 @@ public class customerController extends AppCompatActivity {
 
     public Cursor viewUserInfo(String userName, String password) {
         Cursor res = customer.viewUserInfo(userName, password);
+
+//        res.close();
+
+        return res;
+    }
+
+    public Cursor getMeterInfo(String userName) {
+        Cursor res = customer.getMeterInfo(userName);
+
+//        res.close();
+
+        return res;
+    }
+
+    public Cursor viewAveWaterUsage(String houseType, String month) {
+        Cursor res = customer.viewAveWaterUsage(houseType, month);
+
+//        res.close();
+
         return res;
     }
 

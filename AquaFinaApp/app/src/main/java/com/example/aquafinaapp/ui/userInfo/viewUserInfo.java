@@ -57,7 +57,7 @@ public class viewUserInfo extends AppCompatActivity {
 
         StringBuffer buffer = new StringBuffer();
 
-        if(res!=null && res.getCount() > 0)
+        if(res != null && res.getCount() > 0)
         {
             if (res.moveToFirst()) {
                 do {
@@ -71,6 +71,7 @@ public class viewUserInfo extends AppCompatActivity {
                 } while (res.moveToNext());
             }
         }
+        res.close();
 
         tvShowUserName.setText(showTvShowUserName);
         tvShowContactNo.setText(showTvShowContactNo);

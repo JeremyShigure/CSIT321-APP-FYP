@@ -17,7 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.databinding.FragmentUserInfoBinding;
-import com.example.aquafinaapp.ui.loginPage.loginPage;
+import com.example.aquafinaapp.ui.loginPage.custLogin;
 
 public class userInfoFragment extends Fragment implements View.OnClickListener{
 
@@ -82,15 +82,16 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
 
                     public void onClick(DialogInterface arg0, int arg1) {
 //                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
-                        Intent logoutConfirm = new Intent(getActivity(), loginPage.class);
+                        Intent logoutConfirm = new Intent(getActivity(), custLogin.class);
                         startActivity(logoutConfirm);
 //                        finish();
-                        Toast.makeText(getActivity(), "Log out successfully\n see you again!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "Log out successfully\nsee you again!", Toast.LENGTH_SHORT).show();
                     }
 
                 }).create().show();
     }
 
+    // Go to viewUserInfo page
     private View.OnClickListener viewUserInfo = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -102,6 +103,7 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
     };
 
 
+    // Go to about Us page
     private View.OnClickListener aboutUs = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

@@ -18,7 +18,7 @@ import com.example.aquafinaapp.ui.payment.billDetails;
 public class aboutUs extends AppCompatActivity {
 
     Button returnHomeButton;
-    TextView tvOfficeNum;
+    TextView tvOfficeNum, tvOfficeEmail, tvOfficeAddress;
 
     private String userName;
     private String password;
@@ -38,6 +38,12 @@ public class aboutUs extends AppCompatActivity {
 
         tvOfficeNum = (TextView) findViewById(R.id.tvOfficeNum);
         tvOfficeNum.setOnClickListener(phoneCall);
+
+        tvOfficeEmail = (TextView) findViewById(R.id.tvOfficeEmail);
+        tvOfficeEmail.setOnClickListener(email);
+
+        tvOfficeAddress = (TextView) findViewById(R.id.tvOfficeAddress);
+        tvOfficeAddress.setOnClickListener(address);
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
@@ -80,5 +86,29 @@ public class aboutUs extends AppCompatActivity {
             startActivity(phoneCallActivity);
         }
     };
+
+    private View.OnClickListener email = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent emailActivity = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + "aquafina_supply@gmail.com"));
+            emailActivity.putExtra("userName", userName);
+            emailActivity.putExtra("password", password);
+            startActivity(emailActivity);
+        }
+    };
+
+    private View.OnClickListener address = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent addressActivity = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:?q=110 Orchard Rd S520419 14-10"));
+            addressActivity.putExtra("userName", userName);
+            addressActivity.putExtra("password", password);
+            addressActivity.setPackage("com.google.android.apps.maps");
+            startActivity(addressActivity);
+        }
+    };
+
+
+
 
 }

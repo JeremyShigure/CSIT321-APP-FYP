@@ -171,6 +171,7 @@ public class customer extends SQLiteOpenHelper {
         }
     }
 
+    // Check this user (customer) exist in database or not, if yes, then return true, else will return false
     public boolean checkUser(String username, String password){
         String[] columns = {"cUsername, cPassword"};
         openDatabase();
@@ -191,6 +192,7 @@ public class customer extends SQLiteOpenHelper {
         }
     }
 
+    // Get all the information including user name, contact number, email, region, address, and name based on the customer details
     public Cursor viewUserInfo(String userName, String password) {
         SQLiteDatabase db = openDatabase();
 
@@ -200,10 +202,13 @@ public class customer extends SQLiteOpenHelper {
 //        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
 //        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
         Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
+
+//        res.close();
+
         return res;
     }
 
-
+    // Update the customer contact number
     public boolean updateCustomerContact(String cUsername, String cPassword, String cContact) {
 
         SQLiteDatabase db = openDatabase();
@@ -212,7 +217,7 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cContact", cContact);
 
-        //If insert fails, its gonna return -1 to us
+        //If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
         if(result == -1) {
@@ -223,6 +228,7 @@ public class customer extends SQLiteOpenHelper {
         }
     }
 
+    // Update the customer email
     public boolean updateCustomerEmail(String cUsername, String cPassword, String cEmail) {
 
         SQLiteDatabase db = openDatabase();
@@ -231,9 +237,10 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cEmail", cEmail);
 
-        //If insert fails, its gonna return -1 to us
+        //If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+
         if(result == -1) {
             return false;
         }
@@ -242,6 +249,7 @@ public class customer extends SQLiteOpenHelper {
         }
     }
 
+    // Update the customer password
     public boolean updateCustomerPassword(String cUsername, String cPassword, String newPassword) {
 
         SQLiteDatabase db = openDatabase();
@@ -250,9 +258,10 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cPassword", newPassword);
 
-        //If insert fails, its gonna return -1 to us
+        //If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+
         if(result == -1) {
             return false;
         }
@@ -261,5 +270,64 @@ public class customer extends SQLiteOpenHelper {
         }
     }
 
+    // Get the start date (which will be converted to month), water usage, and house type based on the customer and limit to 6 as the bar chart will only show past 6 months of data
+    public Cursor getMeterInfo(String userName) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{userName};
+
+//        String query = "SELECT startDate FROM waterUsage LIMIT 6";
+//        String query = "SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE customer.cUsername =?";
+//        String query = "SELECT wu.startDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE c.cUsername =?";
+//        String query = "SELECT startDate, wUsage, cHouseType from waterUsage, customer WHERE waterUsage.cID = customer.cID AND customer.cUsername =? LIMIT 6";
+        String query = "SELECT wu.startDate, wu.wUsage, c.cHouseType from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE c.cUsername =? LIMIT 6";
+
+        //testing
+//        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
+//        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
+//        SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID where c.cUsername = 'cus1'
+//        Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM customer WHERE cUsername =? AND cPassword =?", selectionArgs);
+//        Cursor res = db.rawQuery("SELECT waterUsage.startDate FROM waterUsage JOIN customer ON waterUsage.cID = customer.cID WHERE customer.cUsername =?", selectionArgs);
+        Cursor res = db.rawQuery(query, selectionArgs);
+
+//        res.close();
+
+        return res;
+    }
+
+
+//    public Cursor viewWaterUsage(String userName) {
+//        SQLiteDatabase db = openDatabase();
+//
+//        String[] columns = {"*"};
+//
+//        String selection = "cUsername=?";
+//
+//        String[] selectionArgs = {userName};
+//
+//        //testing
+////        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
+////        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
+////        SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID where c.cUsername = 'cus1'
+////        Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM customer WHERE cUsername =? AND cPassword =?", selectionArgs);
+//        Cursor res = db.query("allWaterUsage", columns, selection, selectionArgs, null, null, null);
+//        return res;
+//    }
+
+
+    // Get the predicted average household water usage based on the house type of the customer and current month
+    public Cursor viewAveWaterUsage(String houseType, String month) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{houseType, month};
+
+        String query = "SELECT cHouseType, month, predictUsage from waterUsagePrediction WHERE cHouseType =? AND month =?";
+
+        Cursor res = db.rawQuery(query, selectionArgs);
+
+//        res.close();
+
+        return res;
+    }
 
 }

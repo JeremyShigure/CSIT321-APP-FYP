@@ -82,7 +82,7 @@
                 android:src="@drawable/ic_baseline_email_24" />
 
             <TextView
-                android:id="@+id/officeEmail"
+                android:id="@+id/tvOfficeEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -110,7 +110,7 @@
                 android:src="@drawable/ic_baseline_location_on_24" />
 
             <TextView
-                android:id="@+id/officeAddress"
+                android:id="@+id/tvOfficeAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"

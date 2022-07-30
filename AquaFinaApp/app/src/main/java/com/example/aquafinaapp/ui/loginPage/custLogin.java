@@ -1,0 +1,161 @@
+package com.example.aquafinaapp.ui.loginPage;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.aquafinaapp.Controller.customerController;
+import com.example.aquafinaapp.Entity.customer;
+import com.example.aquafinaapp.Entity.customerCloud;
+import com.example.aquafinaapp.MainActivity;
+import com.example.aquafinaapp.R;
+import com.example.aquafinaapp.common.preferences;
+import com.example.aquafinaapp.ui.userInfo.userInfoFragment;
+
+import java.io.File;
+import java.sql.Connection;
+
+public class custLogin extends AppCompatActivity {
+
+    private Button btnLogin;
+    private EditText etUserName, etPassword;
+
+    customer cus = new customer(this);
+
+    customerController customerController = new customerController();
+
+    customerCloud cusCloud = new customerCloud();
+
+    Connection connect;
+    String ConnectionResult = "";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login_page);
+
+        etUserName = (EditText)findViewById(R.id.etUserName);
+        etPassword = (EditText)findViewById(R.id.etPassword);
+
+        btnLogin = (Button)findViewById(R.id.loginButton);
+
+        btnLogin.setOnClickListener(btnLoginListener);
+
+        File database = getApplicationContext().getDatabasePath(customerController.DBNAME);
+        if (database.exists() == false) {
+
+            cus.getReadableDatabase();
+
+            if (customerController.copyDatabase(this)) {
+                Toast.makeText(this, "Copy database success!!!!!!!", Toast.LENGTH_SHORT);
+                System.out.println("Copy database success!!!!!!!");
+            } else {
+                Toast.makeText(this, "Copy data error", Toast.LENGTH_SHORT);
+                System.out.println("Copy data error");
+                return;
+            }
+        }
+    }
+
+    private View.OnClickListener btnLoginListener = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View view) {
+
+            String userName = etUserName.getText().toString();
+            String password = etPassword.getText().toString();
+
+//            if (userName.isEmpty() || password.isEmpty()) {
+            if (userName.isEmpty() || password.isEmpty()) {
+                Toast.makeText(custLogin.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+            }
+
+            else if (customerController.checkUser(userName, password)) {
+
+                preferences.putLogInStatus(getApplicationContext(), true);
+                preferences.putLoggedInUser(getApplicationContext(), userName.toString());
+
+                Intent login = new Intent(custLogin.this, MainActivity.class);
+//                login.putExtra("userName", etUserName.getText().toString());
+//                login.putExtra("password", etPassword.getText().toString());
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("userName", etUserName.getText().toString());
+                bundle.putString("password", etPassword.getText().toString());
+
+                userInfoFragment userInfoFrag = new userInfoFragment();
+
+                userInfoFrag.setArguments(bundle);
+//                fragmentTransaction.replace(R.id.).commit();
+
+                login.putExtras(bundle);
+                startActivity(login);
+            }
+            else {
+                Toast.makeText(custLogin.this, "User not found!!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+//
+//    private View.OnClickListener btnLoginListener = new View.OnClickListener() {
+//
+//        @Override
+//        public void onClick(View view) {
+//
+//            String userName = etUserName.getText().toString();
+//            String password = etPassword.getText().toString();
+//
+//            String loginTypeIn = userName + password;
+//            System.out.println("loginTypeIn: " + loginTypeIn);
+//
+////            String storeLogin = cusCloud.getCustomerLogin(userName, password);
+////            System.out.println("storeLogin: " + storeLogin);
+//
+//
+////            if (userName.isEmpty() || password.isEmpty()) {
+//            if (userName.isEmpty() || password.isEmpty()) {
+//                Toast.makeText(loginPage.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+//            }
+//            else if (cusCloud.getCustomerLogin(userName, password)) {
+//
+//                preferences.putLogInStatus(getApplicationContext(), true);
+//                preferences.putLoggedInUser(getApplicationContext(), userName.toString());
+//
+//                Intent login = new Intent(loginPage.this, MainActivity.class);
+////                login.putExtra("userName", etUserName.getText().toString());
+////                login.putExtra("password", etPassword.getText().toString());
+//
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//                Bundle bundle = new Bundle();
+//                bundle.putString("userName", etUserName.getText().toString());
+//                bundle.putString("password", etPassword.getText().toString());
+//
+//                userInfoFragment userInfoFrag = new userInfoFragment();
+//
+//                userInfoFrag.setArguments(bundle);
+////                fragmentTransaction.replace(R.id.).commit();
+//
+//                login.putExtras(bundle);
+//                startActivity(login);
+//            }
+//            else {
+//                Toast.makeText(loginPage.this, "User not found!!", Toast.LENGTH_SHORT).show();
+//            }
+//        }
+//    };
+
+
+}
