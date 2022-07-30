@@ -95,4 +95,11 @@ public class customerController extends AppCompatActivity {
         return res;
     }
 
+
+    public Cursor getFAQInfo() {
+        Cursor res = customer.getFAQInfo();
+//        res.close();
+
+        return res;
+    }
 }

@@ -330,4 +330,19 @@ public class customer extends SQLiteOpenHelper {
         return res;
     }
 
+
+    public Cursor getFAQInfo() {
+        SQLiteDatabase db = openDatabase();
+
+//        String[] selectionArgs = new String[]{houseType, month};
+
+        String query = "SELECT * from FAQ";
+
+        Cursor res = db.rawQuery(query, null);
+
+//        res.close();
+
+        return res;
+    }
+
 }

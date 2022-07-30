@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
 //    private static final int MAX_Y_VALUE = 50;
 //    private static final int MIN_Y_VALUE = 5;
     private static final String SET_LABEL = "Water usage in cuM (Cubic Meter)";
-    private static String[] MONTHS = { "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"};
+    private static String[] MONTHS = {"jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"};
 
 //    private static String[] DAYS = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN" };
 
