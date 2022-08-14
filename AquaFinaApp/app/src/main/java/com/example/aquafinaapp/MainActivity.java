@@ -3,18 +3,15 @@ package com.example.aquafinaapp;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.aquafinaapp.common.preferences;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.aquafinaapp.common.preferences;
 import com.example.aquafinaapp.databinding.ActivityMainBinding;
-
-import java.sql.SQLOutput;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 

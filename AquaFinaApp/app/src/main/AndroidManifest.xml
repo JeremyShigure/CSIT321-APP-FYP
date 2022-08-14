@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aquafinaapp">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AquaFinaApp">
+        <activity
+            android:name=".ui.paymentSuccessful.paymentSuccessfulPage"
+            android:exported="false" />
+        <activity
+            android:name=".ui.paymentSuccessful.paymentPage"
+            android:exported="false" />
+        <activity
+            android:name=".ui.payment.newestMonthBillDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.waterSavingTips.waterSavingTips"
+            android:exported="false" />
         <activity
             android:name=".ui.payment.billDetails"
             android:exported="false" />
@@ -37,7 +49,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.paymentSuccessful.viewPaymentDetails"
+            android:name=".ui.payment.viewPaymentDetails"
             android:exported="false" />
         <activity
             android:name=".ui.loginPage.custLogin"

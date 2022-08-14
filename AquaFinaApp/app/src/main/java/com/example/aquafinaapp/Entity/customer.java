@@ -16,7 +16,7 @@ import java.io.Serializable;
 
 public class customer extends SQLiteOpenHelper {
 
-    public static final String DBNAME = "aquafinaDB.db";
+    public static final String DBNAME = "aquafina.db";
     public static final String DBLOCATION = "/data/data/com.example.aquafinaapp/databases/";
     private Context mContext;
     private SQLiteDatabase mDatabase;
@@ -123,12 +123,13 @@ public class customer extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+//        openDatabase();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+//        db.execSQL("DROP DATABASE IF EXISTS" + DBNAME);
+//        onCreate(db);
     }
 
     public SQLiteDatabase openDatabase(){
@@ -330,15 +331,92 @@ public class customer extends SQLiteOpenHelper {
         return res;
     }
 
-
+    // Get all the FAQ words
     public Cursor getFAQInfo() {
         SQLiteDatabase db = openDatabase();
-
-//        String[] selectionArgs = new String[]{houseType, month};
 
         String query = "SELECT * from FAQ";
 
         Cursor res = db.rawQuery(query, null);
+
+        return res;
+    }
+
+
+    // billDetails
+    public Cursor getInvoiceInfo(String date, String totalCost, String userName) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{date, totalCost, userName};
+
+        String query = "SELECT bd.accountID, bd.invoiceID, bd.startDate, bd.endDate, bd.nettCost, bd.consTax, bd.borneFee, bd.subTotal, bd.GST, bd.totalCost, bd.dateIssued, bd.dueDate FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE bd.startDate=? AND bd.totalCost=? AND c.cUsername=? limit 6";
+
+//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
+
+        Cursor res = db.rawQuery(query, selectionArgs);
+
+//        res.close();
+
+        return res;
+    }
+
+
+    // Get all the water saving tips
+    public Cursor getWaterSavingTips() {
+        SQLiteDatabase db = openDatabase();
+
+        String query = "SELECT * from waterSavingTips";
+
+        Cursor res = db.rawQuery(query, null);
+
+        return res;
+    }
+
+
+    // viewPaymentDetails.java
+    public Cursor getPaymentDetails(String userName) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{userName};
+
+        String query = "SELECT bd.startDate, bd.totalCost FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE c.cUsername = ? LIMIT 6";
+//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
+
+        Cursor res = db.rawQuery(query, selectionArgs);
+
+//        res.close();
+
+        return res;
+    }
+
+
+    // viewPaymentDetails.java
+    public Cursor getNewestPaymentDetails(String userName) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{userName};
+
+        String query = "SELECT bd.invoiceID, bd.totalCost FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE c.cUsername=? ORDER BY bd.invoiceID DESC LIMIT 1";
+//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
+
+        Cursor res = db.rawQuery(query, selectionArgs);
+
+//        res.close();
+
+        return res;
+    }
+
+    // Get latest month of bill details using invoiceID and totalCost
+    public Cursor getNewestInvoiceInfo(String invoiceID, String totalCost, String userName) {
+        SQLiteDatabase db = openDatabase();
+
+        String[] selectionArgs = new String[]{invoiceID, totalCost, userName};
+
+        String query = "SELECT bd.accountID, bd.invoiceID, bd.startDate, bd.endDate, bd.nettCost, bd.consTax, bd.borneFee, bd.subTotal, bd.GST, bd.totalCost, bd.dateIssued, bd.dueDate FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE bd.invoiceID=? AND bd.totalCost=? AND c.cUsername=? limit 6";
+
+//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
+
+        Cursor res = db.rawQuery(query, selectionArgs);
 
 //        res.close();
 

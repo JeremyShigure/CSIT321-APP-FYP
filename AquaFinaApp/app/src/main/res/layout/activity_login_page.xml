@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".ui.loginPage.loginPage"
+    tools:context=".ui.loginPage.custLogin"
     android:orientation="vertical">
 
 <!--    <TextView-->
@@ -59,11 +59,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvUserName"
             android:hint="Username"
+            android:maxLines="1"
+            android:inputType="text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
                 android:id="@+id/etUserName"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -73,23 +77,20 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvPassword"
             android:hint="Password"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginTop="15dp"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
                 android:id="@+id/etPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
-            android:layout_gravity="right"/>
 
     </LinearLayout>
 
@@ -154,15 +155,53 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    <Button
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLoginBtns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/loginButton"
-        android:text="Log In"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        android:backgroundTint="@color/black"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="466dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword">
+
+        <Button
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginButton"
+            android:text="Log In"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            android:backgroundTint="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imFingerprint"
+            android:layout_width="57dp"
+            android:layout_height="47dp"
+            android:src="@drawable/ic_baseline_fingerprint_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/loginButton"
+            app:layout_constraintStart_toEndOf="@+id/loginButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tvWaterSavingTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need water saving tips? click here!"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clLoginBtns">
+
+    </TextView>
+
 
 </LinearLayout>

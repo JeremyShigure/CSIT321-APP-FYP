@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.payment.viewPaymentDetails"
+    tools:context=".ui.payment.newestMonthBillDetails"
     android:orientation="vertical">
 
     <TextView
@@ -432,15 +431,15 @@
         android:layout_gravity="center"
         android:background="@color/light_gray" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/payButton"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:text="Click here to pay"-->
-    <!--        android:backgroundTint="@color/navy_blue">-->
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Click here to pay"
+        android:backgroundTint="@color/navy_blue">
 
-    <!--    </Button>-->
+    </Button>
 
     <Button
         android:id="@+id/returnHomeButton"
@@ -451,4 +450,5 @@
         android:backgroundTint="@color/navy_blue">
 
     </Button>
+
 </LinearLayout>

@@ -23,7 +23,7 @@ public class FAQFragment extends Fragment {
 
     private FragmentFaqBinding binding;
 
-    RecyclerView recyclerView;
+    RecyclerView recyclerViewFAQ;
     List<faqWords> faqQuestionsList;
 
     customerController cusController = new customerController();
@@ -36,7 +36,7 @@ public class FAQFragment extends Fragment {
         View root = binding.getRoot();
 
 
-        recyclerView = root.findViewById(R.id.recyclerViewFAQ);
+        recyclerViewFAQ = root.findViewById(R.id.recyclerViewFAQ);
 
         initData();
         setRecyclerView();
@@ -48,8 +48,8 @@ public class FAQFragment extends Fragment {
 
     private void setRecyclerView() {
         faqAdapter faqAdapter = new faqAdapter(faqQuestionsList);
-        recyclerView.setAdapter(faqAdapter);
-        recyclerView.setHasFixedSize(true);
+        recyclerViewFAQ.setAdapter(faqAdapter);
+        recyclerViewFAQ.setHasFixedSize(true);
     }
 
     private void initData() {

@@ -28,7 +28,7 @@ public class viewUserInfo extends AppCompatActivity {
     private String showTvShowAddress;
     private String showTvShowFullName;
 
-    customerController customerController = new customerController();
+    customerController cusController = new customerController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,7 @@ public class viewUserInfo extends AppCompatActivity {
         updateUserInfoButton = (Button)findViewById(R.id.updateUserInfoButton);
         updateUserInfoButton.setOnClickListener(updateUserInfo);
 
-        Cursor res = customerController.viewUserInfo(userName, password);
+        Cursor res = cusController.viewUserInfo(userName, password);
 
         StringBuffer buffer = new StringBuffer();
 

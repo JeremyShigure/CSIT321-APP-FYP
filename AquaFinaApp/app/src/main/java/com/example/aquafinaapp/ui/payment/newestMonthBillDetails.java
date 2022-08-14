@@ -14,15 +14,15 @@ import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.ui.paymentSuccessful.paymentPage;
 
-public class billDetails extends AppCompatActivity {
+public class newestMonthBillDetails extends AppCompatActivity {
 
-    Button returnHomeButton;
+    Button returnHomeButton, payButton;
     TextView tvAccountNo, tvInvoiceID, tvStartDate, tvEndDate, tvNettCost, tvConsTax, tvBorneFee, tvSubtotal, tvGST, tvTotalAmt, tvShowDateIssuedWords, tvShowDueDateWords;
 
     private String userName;
     private String password;
 
-    private String startDate;
+    private String invoiceID;
     private String totalCost;
 
     customerController cusController = new customerController();
@@ -30,13 +30,13 @@ public class billDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bill_details);
+        setContentView(R.layout.activity_newest_month_bill_details);
 
         Intent intent = getIntent();
         userName = intent.getStringExtra("userName");
         password = intent.getStringExtra("password");
 
-        startDate = intent.getStringExtra("startDate");
+        invoiceID = intent.getStringExtra("invoiceID");
         totalCost = intent.getStringExtra("totalCost");
 
 
@@ -55,7 +55,7 @@ public class billDetails extends AppCompatActivity {
         tvShowDueDateWords = (TextView)findViewById(R.id.tvShowDueDateWords);
 
 
-        Cursor billInvoiceDetails = cusController.getInvoiceInfo(startDate, totalCost, userName);
+        Cursor billInvoiceDetails = cusController.getNewestInvoiceInfo(invoiceID, totalCost, userName);
 
         if (billInvoiceDetails != null && billInvoiceDetails.getCount() > 0) {
             if (billInvoiceDetails.moveToFirst()) {
@@ -79,31 +79,30 @@ public class billDetails extends AppCompatActivity {
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
-//        payButton = (Button) findViewById(R.id.payButton);
-//        payButton.setOnClickListener(paymentButton);
+        payButton = (Button) findViewById(R.id.payButton);
+        payButton.setOnClickListener(paymentButton);
     }
 
 
     // pay function
-//    private View.OnClickListener paymentButton = new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            Intent paymentButtonActivity = new Intent (billDetails.this, paymentPage.class);
-//            paymentButtonActivity.putExtra("userName", userName);
-//            paymentButtonActivity.putExtra("password", password);
-//
-//            paymentButtonActivity.putExtra("startDate", startDate);
-//            paymentButtonActivity.putExtra("totalCost", totalCost);
-//
-//            startActivity(paymentButtonActivity);
-//        }
-//    };
+    private View.OnClickListener paymentButton = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent paymentButtonActivity = new Intent (newestMonthBillDetails.this, paymentPage.class);
+            paymentButtonActivity.putExtra("userName", userName);
+            paymentButtonActivity.putExtra("password", password);
 
+            paymentButtonActivity.putExtra("invoiceID", invoiceID);
+            paymentButtonActivity.putExtra("totalCost", totalCost);
+
+            startActivity(paymentButtonActivity);
+        }
+    };
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent returnHomeActivity = new Intent (billDetails.this, MainActivity.class);
+            Intent returnHomeActivity = new Intent (newestMonthBillDetails.this, MainActivity.class);
             returnHomeActivity.putExtra("userName", userName);
             returnHomeActivity.putExtra("password", password);
             startActivity(returnHomeActivity);

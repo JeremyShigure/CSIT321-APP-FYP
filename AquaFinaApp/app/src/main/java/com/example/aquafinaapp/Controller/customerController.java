@@ -102,4 +102,45 @@ public class customerController extends AppCompatActivity {
 
         return res;
     }
+
+    // get all the details of customer invoice
+    public Cursor getInvoiceInfo(String date, String totalCost, String userName) {
+        Cursor res = customer.getInvoiceInfo(date, totalCost, userName);
+//        res.close();
+
+        return res;
+    }
+
+
+    public Cursor getWaterSavingTips() {
+        Cursor res = customer.getWaterSavingTips();
+//        res.close();
+
+        return res;
+    }
+
+
+    public Cursor getPaymentDetails(String userName) {
+        Cursor res = customer.getPaymentDetails(userName);
+//        res.close();
+
+        return res;
+    }
+
+
+    public Cursor getNewestPaymentDetails(String userName) {
+        Cursor res = customer.getNewestPaymentDetails(userName);
+//        res.close();
+
+        return res;
+    }
+
+
+    public Cursor getNewestInvoiceInfo(String invoiceID, String totalCost, String userName) {
+        Cursor res = customer.getNewestInvoiceInfo(invoiceID, totalCost, userName);
+//        res.close();
+
+        return res;
+    }
+
 }

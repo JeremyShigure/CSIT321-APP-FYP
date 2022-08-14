@@ -3,61 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/layout/activity_payment_successful.xml" value="0.2463768115942029" />
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.36666666666666664" />
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
-        <entry key="..\:/CSIT242 Assignments/AquaFinaApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36102564102564105" />
-        <entry key="..\:/CSIT321 Github/CSIT321/AquaFinaApp/app/src/main/res/layout/activity_login_page.xml" value="0.17806484295845998" />
-<<<<<<< Updated upstream
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/activity_about_us.xml" value="0.33" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/activity_login_page.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/activity_update_user_info.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/activity_view_user_info.xml" value="0.33" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/faq_row.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/fragment_faq.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/fragment_home.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/fragment_payment.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/2.0 AquaFinaApp/app/src/main/res/layout/fragment_user_info.xml" value="0.22" />
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/drawable/ic_baseline_payment_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/drawable/ic_baseline_update_24.xml" value="0.241" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/font/fonts.xml" value="0.3958333333333333" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/layout/activity_about_us.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/layout/activity_login_page.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/layout/activity_view_user_info.xml" value="0.33" />
-        <entry key="..\:/Users/PC/Desktop/AquaFinaApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27395833333333336" />
-=======
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 APP FYP/CSIT321-APP-FYP/AquaFinaApp/app/src/main/res/layout/activity_update_user_info.xml" value="0.2653985507246377" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 APP FYP/CSIT321-APP-FYP/AquaFinaApp/app/src/main/res/layout/activity_view_user_info.xml" value="0.36666666666666664" />
->>>>>>> Stashed changes
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/drawable/ic_baseline_question_answer_24.xml" value="0.196" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_about_us.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_login_page.xml" value="0.3555253623188406" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_payment_successful.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_update_user_info.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/activity_view_user_info.xml" value="0.2975391498881432" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/faq_row.xml" value="0.25" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/fragment_faq.xml" value="0.33" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/fragment_home.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/fragment_notifications.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/fragment_payment.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/fragment_user_info.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/layout/row.xml" value="0.1" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36102564102564105" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2115" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/CSIT321 codes/AquaFinaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2115" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_bill_details.xml" value="0.15282392026578073" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_newest_month_bill_details.xml" value="0.25" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_payment_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_payment_page.xml" value="0.2866847826086957" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/fragment_payment.xml" value="0.25815217391304346" />
       </map>
     </option>
   </component>

@@ -128,7 +128,7 @@
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/opensans_reg"
                 android:hint="Please enter phone number here"
-                android:inputType="text">
+                android:inputType="number">
 
             </com.google.android.material.textfield.TextInputEditText>
 
