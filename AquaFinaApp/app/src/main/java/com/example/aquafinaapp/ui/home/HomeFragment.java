@@ -46,19 +46,12 @@ public class HomeFragment extends Fragment {
 
     // Bar Chart things
     // -------------------------------------------------------------------------------------------------------------------------------------------------
-    private static final int MAX_X_VALUE = 6;
-//    private static final int MAX_Y_VALUE = 50;
-//    private static final int MIN_Y_VALUE = 5;
     private static final String SET_LABEL = "Water usage in cuM (Cubic Meter)";
     private static String[] MONTHS = {"jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"};
-
-//    private static String[] DAYS = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN" };
-
 
     private static ArrayList<String> days = new ArrayList<>();
     private static ArrayList<String> usages = new ArrayList<>();
     private static ArrayList<String> daysToString = new ArrayList<>();
-
 
     private static ArrayList<String> cHouseType = new ArrayList<>();
     private static String getLastCHouseType = "";
@@ -73,7 +66,6 @@ public class HomeFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        days.clear();
 
         HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
@@ -86,13 +78,8 @@ public class HomeFragment extends Fragment {
         userName = bundle.getString("userName");
         password = bundle.getString("password");
 
-//        days.clear();
-//        daysToString.clear();
-
         // First time run this code is confirm empty, so will run here
         if (days.isEmpty() && usages.isEmpty()) {
-//            days.clear();
-//            daysToString.clear();
             Cursor water = cusController.getMeterInfo(userName);
 
             water.moveToFirst();
@@ -101,7 +88,6 @@ public class HomeFragment extends Fragment {
                 days.add(water.getString(0));
                 usages.add(water.getString(1));
                 cHouseType.add(water.getString(2));
-//                water.getString(2);
                 water.moveToNext();
             }
             water.close();
@@ -129,7 +115,6 @@ public class HomeFragment extends Fragment {
                 days.add(water.getString(0));
                 usages.add(water.getString(1));
                 cHouseType.add(water.getString(2));
-//                water.getString(2);
                 water.moveToNext();
             }
 
@@ -137,29 +122,10 @@ public class HomeFragment extends Fragment {
                 String [] a = days.get(i).split("/");
 
                 daysToString.add(returnMonth(a[1]));
-
             }
         }
 
-
-//        else {
-//            days.clear();
-//
-//        }
-
-
-        // original place
-//        for (int i = 0; i < days.size(); i++) {
-//            String [] a = days.get(i).split("/");
-//
-//            daysToString.add(returnMonth(a[1]));
-//
-//        }
-
-
-
-        // Cursor of getting the predicted average vale of water
-
+        // Cursor of getting the predicted average value of water
         getLastCHouseType = cHouseType.get(5);
         getLastMonth = daysToString.get(5);
         getLastUsage = usages.get(5);
@@ -170,58 +136,12 @@ public class HomeFragment extends Fragment {
         }
         predictWater.close();
 
-
-        // Testing part for showing the elements in arraylist
-        // -------------------------------------------------------------------------------------------------------------------------------------------------
-
-        System.out.println("ttttttttttttteeeeeeeeeeeeeesssssssssssstttttttttttiiiiiiiiiiiinnnnnnnnnnggggggg");
-
-        System.out.println("------------------------------------------------------");
-
-        System.out.println("days value" + days);
-        System.out.println("water usages value" + usages);
-        System.out.println("water houseType value" + cHouseType);
-
-
-
-        System.out.println("------------------------------------------------------");
-        System.out.println("ttttttttttttteeeeeeeeeeeeeesssssssssssstttttttttttiiiiiiiiiiiinnnnnnnnnnggggggg");
-
-        System.out.println("------------------------------------------------------");
-
-//        for (int i = 0; i < daysToString.size(); i++) {
-//            System.out.println(daysToString.get(i));
-//        }
-
-        System.out.println("days value" + daysToString.toString());
-
-        System.out.println("------------------------------------------------------");
-
-        // -------------------------------------------------------------------------------------------------------------------------------------------------
-        // Finish of testing part
-
         // Bar Chart things
-        // -------------------------------------------------------------------------------------------------------------------------------------------------
-
         chart = root.findViewById(R.id.fragmentBarChart);
 
         BarData data = createChartData();
         configureChartAppearance();
         prepareChartData(data);
-
-//        return root
-
-
-        // -------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-        // old place
-
-//        Intent intent = getActivity().getIntent();
-//
-//        Bundle bundle = getActivity().getIntent().getExtras();
-//        userName = bundle.getString("userName");
-//        password = bundle.getString("password");
 
         textUserName = (TextView) root.findViewById(R.id.textUserName);
         textUserHint = (TextView) root.findViewById(R.id.textUserHint);
@@ -239,9 +159,6 @@ public class HomeFragment extends Fragment {
         tvPredictedValue.setText(predictUsage + " cuM");
         tvActualValue.setText(getLastUsage + " cuM");
 
-
-//        final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
 
     }
@@ -281,7 +198,6 @@ public class HomeFragment extends Fragment {
 
 
         YAxis axisRight = chart.getAxisRight();
-//        axisRight.setGranularity(10f);
         axisRight.setAxisMinimum(0);
 
     }
@@ -291,35 +207,16 @@ public class HomeFragment extends Fragment {
         ArrayList<BarEntry> values = new ArrayList<>();
         Random rand = new Random();
 
-        // Storing y values (the water usage) to compare
-//        float yValues [] = new float [5];
         ArrayList <Float> yValues = new ArrayList<>();
-
 
         for (int i = 0; i < usages.size(); i++) {
             float x = i;
-//            float y = MIN_Y_VALUE + (MAX_Y_VALUE - MIN_Y_VALUE) * rand.nextFloat();
             float y = Float.parseFloat(usages.get(i));
 
-//            System.out.println("y" + i + " value:" + y);
-
-//            float y = new Util().randomFloatBetween(MIN_Y_VALUE, MAX_Y_VALUE);
             values.add(new BarEntry(x, y));
 
             yValues.add(y);
-
-//            System.out.println(yValues);
-
-
-//            for (int j = 0; j < yValues.length; j++) {
-//                yValues [j] += y;
-////                System.out.println("yValues: " + yValues[j]);
-//            }
-
-
         }
-//        System.out.println("y values testing" + yValues);
-
 
         // Set to textview based on last month vs current month and average household usage vs current month usage
         if (yValues.get(4) > yValues.get(5) && yValues.get(5) < Integer.valueOf(predictUsage)) {
@@ -399,7 +296,4 @@ public class HomeFragment extends Fragment {
         }
         return convert;
     }
-
-
-
 }

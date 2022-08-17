@@ -7,7 +7,6 @@
     tools:context=".ui.userInfo.updateCustomerContact"
     android:orientation="vertical">
 
-    <!-- Top Half UI -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -94,6 +93,7 @@
             </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -103,6 +103,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvContactNo"
             android:layout_width="wrap_content"
@@ -128,40 +129,12 @@
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/opensans_reg"
                 android:hint="Please enter phone number here"
-                android:inputType="number">
+                android:inputType="number"
+                android:maxLength="8">
 
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvHintsWords"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Hint: "-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="30dp"-->
-<!--            android:layout_marginTop="100dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/clConfirmPassword">-->
-
-<!--        </TextView>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvContactNoHints"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Please enter a 8-digit phone number \nto link your account "-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/tvHintsWords">-->
-
-<!--        </TextView>-->
 
     <Button
         android:id="@+id/returnHomeButton"
@@ -178,5 +151,6 @@
         android:backgroundTint="#0047ab"/>
 
     </LinearLayout>
+
 </LinearLayout>
 

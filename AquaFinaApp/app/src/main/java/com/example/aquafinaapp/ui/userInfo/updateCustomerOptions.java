@@ -4,13 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
 
 public class updateCustomerOptions extends AppCompatActivity {
@@ -71,6 +66,4 @@ public class updateCustomerOptions extends AppCompatActivity {
             startActivity(updateCustomerPassword);
         }
     };
-
-
 }

@@ -30,7 +30,6 @@ public class PaymentFragment extends Fragment {
     private String invoiceID;
     private String totalCost;
 
-
     customerController cusController = new customerController();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,8 +70,6 @@ public class PaymentFragment extends Fragment {
         btnBillDetails = root.findViewById(R.id.btnBillDetails);
         btnBillDetails.setOnClickListener(viewNewestInvoice);
 
-//        final TextView textView = binding.textDashboard;
-//        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -92,10 +89,6 @@ public class PaymentFragment extends Fragment {
             viewNewestInvoiceActivity.putExtra("invoiceID", invoiceID);
             viewNewestInvoiceActivity.putExtra("totalCost", totalCost);
 
-            System.out.println("invoiceID: " + invoiceID);
-            System.out.println("totalcost: " + totalCost);
-
-            System.out.println("EEEEEEEEEENNNNNNNNNNNNTTTTTTTTTTTEEEEEEEEERRRRRRRRRRRRIIIIIIIIIIINNNNNNNNNNNNGGGGGGGGG now");
             startActivity(viewNewestInvoiceActivity);
         }
     };
@@ -110,41 +103,4 @@ public class PaymentFragment extends Fragment {
             startActivity(viewPaymentDetailsActivity);
         }
     };
-
-//
-//    @Override
-//    public void onClick(View view) {
-
-
-        // THIS WHOLE CHUNK IS THE DIALOG FOR PRESSING YES TO GO TO NEXT PAGE, AND NO TO REMAIN AT THIS PAGE
-        //-------------------------------------------------------------------------------------------------------------------------
-//
-//        new AlertDialog.Builder(getActivity())
-//                .setTitle("Please Check the payment amount?")
-//                .setMessage("Payment price here")
-//                .setNegativeButton(android.R.string.no, null)
-//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-//
-//                    public void onClick(DialogInterface arg0, int arg1) {
-////                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
-//                        Intent paymentConfirm = new Intent(getActivity(), paymentSuccessful.class);
-//                        paymentConfirm.putExtra("userName", userName);
-//                        paymentConfirm.putExtra("password", password);
-//                        startActivity(paymentConfirm);
-////                        finish();
-//                        Toast.makeText(getActivity(), "Payment successfully", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                }).create().show();
-        //-------------------------------------------------------------------------------------------------------------------------
-
-
-        // THE REAL CODE IS HERE ~~
-
-//        Intent paymentConfirm = new Intent(getActivity(), viewPaymentDetails.class);
-//        paymentConfirm.putExtra("userName", userName);
-//        paymentConfirm.putExtra("password", password);
-//        startActivity(paymentConfirm);
-//    }
-
 }

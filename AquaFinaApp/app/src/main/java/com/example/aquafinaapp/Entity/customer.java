@@ -113,7 +113,8 @@ public class customer extends SQLiteOpenHelper {
     }
 
     public customer(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DBNAME, factory, version); //Prevents it from creating an SQL .db file until you set a name to a value instead of null
+        super(context, DBNAME, factory, version);
+        //Prevents it from creating an SQL .db file until setting a name to a value instead of null
     }
 
     public customer(Context context) {
@@ -123,19 +124,15 @@ public class customer extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        openDatabase();
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-//        db.execSQL("DROP DATABASE IF EXISTS" + DBNAME);
-//        onCreate(db);
+
     }
 
     public SQLiteDatabase openDatabase(){
-//        String path = DBLOCATION + DBNAME;
-//        mDatabase = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);
-//        return mDatabase;
 
         String dbPath = DBLOCATION + DBNAME;
         if (mDatabase != null && mDatabase.isOpen()) {
@@ -173,12 +170,12 @@ public class customer extends SQLiteOpenHelper {
     }
 
     // Check this user (customer) exist in database or not, if yes, then return true, else will return false
-    public boolean checkUser(String username, String password){
+    public boolean checkUser(String userName, String password){
         String[] columns = {"cUsername, cPassword"};
         openDatabase();
 
         String selection = "cUsername=? and cPassword=? ";
-        String[] selectionArgs = {username, password};
+        String[] selectionArgs = {userName, password};
 
         Cursor cursor = mDatabase.query("customer", columns, selection, selectionArgs, null, null, null);
         int count = cursor.getCount();
@@ -199,12 +196,7 @@ public class customer extends SQLiteOpenHelper {
 
         String[] selectionArgs = new String[]{userName, password};
 
-        //testing
-//        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
-//        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
         Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM " + "customer" + " WHERE cUsername =? AND cPassword =?", selectionArgs);
-
-//        res.close();
 
         return res;
     }
@@ -218,9 +210,10 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cContact", cContact);
 
-        //If update fails, its gonna return -1 to us
+        // If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+
         if(result == -1) {
             return false;
         }
@@ -238,7 +231,7 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cEmail", cEmail);
 
-        //If update fails, its gonna return -1 to us
+        // If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
 
@@ -259,7 +252,7 @@ public class customer extends SQLiteOpenHelper {
 
         contentValues.put("cPassword", newPassword);
 
-        //If update fails, its gonna return -1 to us
+        // If update fails, its gonna return -1 to us
 
         long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
 
@@ -277,44 +270,12 @@ public class customer extends SQLiteOpenHelper {
 
         String[] selectionArgs = new String[]{userName};
 
-//        String query = "SELECT startDate FROM waterUsage LIMIT 6";
-//        String query = "SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE customer.cUsername =?";
-//        String query = "SELECT wu.startDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE c.cUsername =?";
-//        String query = "SELECT startDate, wUsage, cHouseType from waterUsage, customer WHERE waterUsage.cID = customer.cID AND customer.cUsername =? LIMIT 6";
         String query = "SELECT wu.startDate, wu.wUsage, c.cHouseType from waterUsage wu JOIN customer c ON wu.cID = c.cID WHERE c.cUsername =? LIMIT 6";
 
-        //testing
-//        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
-//        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
-//        SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID where c.cUsername = 'cus1'
-//        Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM customer WHERE cUsername =? AND cPassword =?", selectionArgs);
-//        Cursor res = db.rawQuery("SELECT waterUsage.startDate FROM waterUsage JOIN customer ON waterUsage.cID = customer.cID WHERE customer.cUsername =?", selectionArgs);
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
 
         return res;
     }
-
-
-//    public Cursor viewWaterUsage(String userName) {
-//        SQLiteDatabase db = openDatabase();
-//
-//        String[] columns = {"*"};
-//
-//        String selection = "cUsername=?";
-//
-//        String[] selectionArgs = {userName};
-//
-//        //testing
-////        System.out.println("uuuuuuuuuuuuuuuuuuuuuussssssssssssssssssssseeeeeeeeeeeeeeeeeeerrrrrrrrrrr" + userName);
-////        System.out.println("ppppppppppaaaaaaaaaaaaaassssssssssssssssssswwwwwwwwwwwwwddddddddddd" +password);
-////        SELECT wu.startDate, wu.endDate, wu.wUsage from waterUsage wu JOIN customer c ON wu.cID = c.cID where c.cUsername = 'cus1'
-////        Cursor res = db.rawQuery("SELECT cUsername, cContact, cEmail, cRegion, cAddress, cName FROM customer WHERE cUsername =? AND cPassword =?", selectionArgs);
-//        Cursor res = db.query("allWaterUsage", columns, selection, selectionArgs, null, null, null);
-//        return res;
-//    }
-
 
     // Get the predicted average household water usage based on the house type of the customer and current month
     public Cursor viewAveWaterUsage(String houseType, String month) {
@@ -325,8 +286,6 @@ public class customer extends SQLiteOpenHelper {
         String query = "SELECT cHouseType, month, predictUsage from waterUsagePrediction WHERE cHouseType =? AND month =?";
 
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
 
         return res;
     }
@@ -351,11 +310,8 @@ public class customer extends SQLiteOpenHelper {
 
         String query = "SELECT bd.accountID, bd.invoiceID, bd.startDate, bd.endDate, bd.nettCost, bd.consTax, bd.borneFee, bd.subTotal, bd.GST, bd.totalCost, bd.dateIssued, bd.dueDate FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE bd.startDate=? AND bd.totalCost=? AND c.cUsername=? limit 6";
 
-//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
 
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
 
         return res;
     }
@@ -380,11 +336,8 @@ public class customer extends SQLiteOpenHelper {
         String[] selectionArgs = new String[]{userName};
 
         String query = "SELECT bd.startDate, bd.totalCost FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE c.cUsername = ? LIMIT 6";
-//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
 
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
 
         return res;
     }
@@ -397,11 +350,8 @@ public class customer extends SQLiteOpenHelper {
         String[] selectionArgs = new String[]{userName};
 
         String query = "SELECT bd.invoiceID, bd.totalCost FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE c.cUsername=? ORDER BY bd.invoiceID DESC LIMIT 1";
-//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
 
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
 
         return res;
     }
@@ -414,12 +364,8 @@ public class customer extends SQLiteOpenHelper {
 
         String query = "SELECT bd.accountID, bd.invoiceID, bd.startDate, bd.endDate, bd.nettCost, bd.consTax, bd.borneFee, bd.subTotal, bd.GST, bd.totalCost, bd.dateIssued, bd.dueDate FROM billingDetail bd JOIN customer c ON bd.cID = c.cID WHERE bd.invoiceID=? AND bd.totalCost=? AND c.cUsername=? limit 6";
 
-//            SELECT bd.invoiceID, bd.accountID, bd.startDate, bd.endDate, bd.netCost, bd.consTax, bd.GST, bd.totalCost FROM billingDetails db JOIN customer c ON db.cID = c.cID WHERE c.userName=?
-
         Cursor res = db.rawQuery(query, selectionArgs);
-
-//        res.close();
-
+        
         return res;
     }
 

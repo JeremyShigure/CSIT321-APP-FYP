@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +18,7 @@ public class updateCustomerPassword extends AppCompatActivity {
 
     customerController customerController = new customerController();
 
-    TextView tvHintsWords, tvPasswordHints, tvEmail;
+    TextView tvEmail;
     EditText etPassword, etConfirmPassword;
     Button returnHomeButton;
 
@@ -31,8 +30,6 @@ public class updateCustomerPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer_password);
 
-//        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
-//        tvPasswordHints = (TextView)findViewById(R.id.tvPasswordHints);
         tvEmail = (TextView)findViewById(R.id.tvEmail);
 
         Intent intent = getIntent();
@@ -44,7 +41,6 @@ public class updateCustomerPassword extends AppCompatActivity {
 
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(updateAndReturnHome);
-
     }
 
 
@@ -57,9 +53,6 @@ public class updateCustomerPassword extends AppCompatActivity {
             else if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
                 Toast.makeText(updateCustomerPassword.this, "Please make sure passwords are same!", Toast.LENGTH_SHORT).show();
             }
-//            else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
-//                Toast.makeText(updateCustomerPassword.this, "Please make sure \nemail format is correct!", Toast.LENGTH_SHORT).show();
-//            }
             else {
                 boolean check = customerController.updateCustomerPassword(userName, password, etConfirmPassword.getText().toString());
 
@@ -74,12 +67,6 @@ public class updateCustomerPassword extends AppCompatActivity {
                     Toast.makeText(updateCustomerPassword.this, "Update Failed!", Toast.LENGTH_SHORT).show();
                 }
             }
-
-//            Intent updateAndReturnHomeActivity = new Intent(updateUserInfo.this, MainActivity.class);
-//            updateAndReturnHomeActivity.putExtra("userName", userName);
-//            updateAndReturnHomeActivity.putExtra("password", password);
-//            startActivity(updateAndReturnHomeActivity);
         }
     };
-
 }

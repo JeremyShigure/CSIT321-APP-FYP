@@ -54,7 +54,6 @@ public class newestMonthBillDetails extends AppCompatActivity {
         tvShowDateIssuedWords = (TextView)findViewById(R.id.tvShowDateIssuedWords);
         tvShowDueDateWords = (TextView)findViewById(R.id.tvShowDueDateWords);
 
-
         Cursor billInvoiceDetails = cusController.getNewestInvoiceInfo(invoiceID, totalCost, userName);
 
         if (billInvoiceDetails != null && billInvoiceDetails.getCount() > 0) {
@@ -75,14 +74,12 @@ public class newestMonthBillDetails extends AppCompatActivity {
         }
         billInvoiceDetails.close();
 
-
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
         payButton = (Button) findViewById(R.id.payButton);
         payButton.setOnClickListener(paymentButton);
     }
-
 
     // pay function
     private View.OnClickListener paymentButton = new View.OnClickListener() {
@@ -108,6 +105,4 @@ public class newestMonthBillDetails extends AppCompatActivity {
             startActivity(returnHomeActivity);
         }
     };
-
-
 }

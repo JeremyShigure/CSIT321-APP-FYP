@@ -19,7 +19,7 @@ public class updateCustomerEmail extends AppCompatActivity {
 
     customerController customerController = new customerController();
 
-    TextView tvHintsWords, tvEmailHints, tvEmail;
+    TextView tvEmail;
     EditText etEmail;
     Button returnHomeButton;
 
@@ -31,8 +31,6 @@ public class updateCustomerEmail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_customer_email);
 
-//        tvHintsWords = (TextView)findViewById(R.id.tvHintsWords);
-//        tvEmailHints = (TextView)findViewById(R.id.tvEmailHints);
         tvEmail = (TextView)findViewById(R.id.tvEmail);
 
         Intent intent = getIntent();
@@ -53,9 +51,6 @@ public class updateCustomerEmail extends AppCompatActivity {
             if (etEmail.getText().toString().isEmpty()) {
                 Toast.makeText(updateCustomerEmail.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
             }
-//            else if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
-//                Toast.makeText(updateCustomerEmail.this, "Please make sure passwords are same!", Toast.LENGTH_SHORT).show();
-//            }
             else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
                 Toast.makeText(updateCustomerEmail.this, "Please make sure \nemail format is correct!", Toast.LENGTH_SHORT).show();
             }

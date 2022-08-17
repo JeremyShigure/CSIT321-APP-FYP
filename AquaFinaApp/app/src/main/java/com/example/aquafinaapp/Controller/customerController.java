@@ -74,15 +74,11 @@ public class customerController extends AppCompatActivity {
     public Cursor viewUserInfo(String userName, String password) {
         Cursor res = customer.viewUserInfo(userName, password);
 
-//        res.close();
-
         return res;
     }
 
     public Cursor getMeterInfo(String userName) {
         Cursor res = customer.getMeterInfo(userName);
-
-//        res.close();
 
         return res;
     }
@@ -90,15 +86,12 @@ public class customerController extends AppCompatActivity {
     public Cursor viewAveWaterUsage(String houseType, String month) {
         Cursor res = customer.viewAveWaterUsage(houseType, month);
 
-//        res.close();
-
         return res;
     }
 
 
     public Cursor getFAQInfo() {
         Cursor res = customer.getFAQInfo();
-//        res.close();
 
         return res;
     }
@@ -106,7 +99,6 @@ public class customerController extends AppCompatActivity {
     // get all the details of customer invoice
     public Cursor getInvoiceInfo(String date, String totalCost, String userName) {
         Cursor res = customer.getInvoiceInfo(date, totalCost, userName);
-//        res.close();
 
         return res;
     }
@@ -114,7 +106,6 @@ public class customerController extends AppCompatActivity {
 
     public Cursor getWaterSavingTips() {
         Cursor res = customer.getWaterSavingTips();
-//        res.close();
 
         return res;
     }
@@ -122,7 +113,6 @@ public class customerController extends AppCompatActivity {
 
     public Cursor getPaymentDetails(String userName) {
         Cursor res = customer.getPaymentDetails(userName);
-//        res.close();
 
         return res;
     }
@@ -130,7 +120,6 @@ public class customerController extends AppCompatActivity {
 
     public Cursor getNewestPaymentDetails(String userName) {
         Cursor res = customer.getNewestPaymentDetails(userName);
-//        res.close();
 
         return res;
     }
@@ -138,7 +127,6 @@ public class customerController extends AppCompatActivity {
 
     public Cursor getNewestInvoiceInfo(String invoiceID, String totalCost, String userName) {
         Cursor res = customer.getNewestInvoiceInfo(invoiceID, totalCost, userName);
-//        res.close();
 
         return res;
     }

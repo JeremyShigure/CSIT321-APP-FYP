@@ -7,7 +7,6 @@
     tools:context=".ui.userInfo.updateCustomerEmail"
     android:orientation="vertical">
 
-    <!-- Top Half UI -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -94,6 +93,7 @@
             </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -135,49 +135,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        <Button-->
-<!--            android:id="@+id/returnHomeButton"-->
-<!--            android:layout_width="250dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:text="Confirm Update and return to home page"-->
-<!--            android:fontFamily="@font/opensans_med"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/clConfirmPassword"-->
-<!--            android:backgroundTint="#0047ab"/>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvHintsWords"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Hint: "-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="30dp"-->
-<!--            android:layout_marginTop="100dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/clConfirmPassword">-->
-
-<!--        </TextView>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tvEmailHints"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Email entered will link to your account"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/tvHintsWords">-->
-
-<!--        </TextView>-->
-
     </LinearLayout>
 
     <Button
@@ -193,5 +150,6 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmailHints"
         android:backgroundTint="#0047ab"/>
+
 </LinearLayout>
 

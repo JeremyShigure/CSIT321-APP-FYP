@@ -65,9 +65,7 @@ public class custLogin extends AppCompatActivity {
 
         tvWaterSavingTips = (TextView) findViewById(R.id.tvWaterSavingTips);
 
-
         // Fingerprint login here
-        // ---------------------------------------------------------------------------------------
         imFingerprint = (ImageView) findViewById(R.id.imFingerprint);
 
         BiometricManager biometricManager = BiometricManager.from(this);
@@ -106,9 +104,6 @@ public class custLogin extends AppCompatActivity {
                     @NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
 
-//                userName = etUserName.getText().toString();
-//                password = etPassword.getText().toString();
-
                 userName = "cus1";
                 password = "pw123";
 
@@ -118,8 +113,6 @@ public class custLogin extends AppCompatActivity {
                 preferences.putLoggedInUser(getApplicationContext(), userName.toString());
 
                 Intent login = new Intent(custLogin.this, MainActivity.class);
-//                login.putExtra("userName", etUserName.getText().toString());
-//                login.putExtra("password", etPassword.getText().toString());
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -131,7 +124,6 @@ public class custLogin extends AppCompatActivity {
                 userInfoFragment userInfoFrag = new userInfoFragment();
 
                 userInfoFrag.setArguments(bundle);
-//                fragmentTransaction.replace(R.id.).commit();
 
                 login.putExtras(bundle);
                 startActivity(login);
@@ -155,20 +147,9 @@ public class custLogin extends AppCompatActivity {
                 .setNegativeButtonText("Use account password")
                 .build();
 
-        // Prompt appears when user clicks "Log in".
-        // Consider integrating with the keystore to unlock cryptographic operations,
-        // if needed by your app.
-
-//        Button biometricLoginButton = findViewById(R.id.biometric_login);
-
         imFingerprint.setOnClickListener(view -> {
             biometricPrompt.authenticate(promptInfo);
         });
-
-
-
-
-        // ---------------------------------------------------------------------------------------
 
         btnLogin = (Button)findViewById(R.id.loginButton);
 
@@ -181,6 +162,7 @@ public class custLogin extends AppCompatActivity {
 
             cus.getReadableDatabase();
 
+            // Let the database in assets folder copy and paste to the phone
             if (customerController.copyDatabase(this)) {
                 Toast.makeText(this, "Copy database success!!!!!!!", Toast.LENGTH_SHORT);
                 System.out.println("Copy database success!!!!!!!");
@@ -200,9 +182,8 @@ public class custLogin extends AppCompatActivity {
             userName = etUserName.getText().toString();
             password = etPassword.getText().toString();
 
-//            if (userName.isEmpty() || password.isEmpty()) {
             if (userName.isEmpty() || password.isEmpty()) {
-                Toast.makeText(custLogin.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(custLogin.this, "Username or password can't be empty!", Toast.LENGTH_SHORT).show();
             }
 
             else if (customerController.checkUser(userName, password)) {
@@ -211,8 +192,6 @@ public class custLogin extends AppCompatActivity {
                 preferences.putLoggedInUser(getApplicationContext(), userName.toString());
 
                 Intent login = new Intent(custLogin.this, MainActivity.class);
-//                login.putExtra("userName", etUserName.getText().toString());
-//                login.putExtra("password", etPassword.getText().toString());
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -224,7 +203,6 @@ public class custLogin extends AppCompatActivity {
                 userInfoFragment userInfoFrag = new userInfoFragment();
 
                 userInfoFrag.setArguments(bundle);
-//                fragmentTransaction.replace(R.id.).commit();
 
                 login.putExtras(bundle);
                 startActivity(login);
@@ -243,56 +221,4 @@ public class custLogin extends AppCompatActivity {
             startActivity(waterSavingTipsActivity);
         }
     };
-
-//
-//    private View.OnClickListener btnLoginListener = new View.OnClickListener() {
-//
-//        @Override
-//        public void onClick(View view) {
-//
-//            String userName = etUserName.getText().toString();
-//            String password = etPassword.getText().toString();
-//
-//            String loginTypeIn = userName + password;
-//            System.out.println("loginTypeIn: " + loginTypeIn);
-//
-////            String storeLogin = cusCloud.getCustomerLogin(userName, password);
-////            System.out.println("storeLogin: " + storeLogin);
-//
-//
-////            if (userName.isEmpty() || password.isEmpty()) {
-//            if (userName.isEmpty() || password.isEmpty()) {
-//                Toast.makeText(loginPage.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
-//            }
-//            else if (cusCloud.getCustomerLogin(userName, password)) {
-//
-//                preferences.putLogInStatus(getApplicationContext(), true);
-//                preferences.putLoggedInUser(getApplicationContext(), userName.toString());
-//
-//                Intent login = new Intent(loginPage.this, MainActivity.class);
-////                login.putExtra("userName", etUserName.getText().toString());
-////                login.putExtra("password", etPassword.getText().toString());
-//
-//                FragmentManager fragmentManager = getSupportFragmentManager();
-//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//                Bundle bundle = new Bundle();
-//                bundle.putString("userName", etUserName.getText().toString());
-//                bundle.putString("password", etPassword.getText().toString());
-//
-//                userInfoFragment userInfoFrag = new userInfoFragment();
-//
-//                userInfoFrag.setArguments(bundle);
-////                fragmentTransaction.replace(R.id.).commit();
-//
-//                login.putExtras(bundle);
-//                startActivity(login);
-//            }
-//            else {
-//                Toast.makeText(loginPage.this, "User not found!!", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    };
-
-
 }

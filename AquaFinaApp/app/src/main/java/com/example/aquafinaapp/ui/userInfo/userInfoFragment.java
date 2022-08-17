@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,13 +43,6 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
             userName = bundle.getString("userName");
             password = bundle.getString("password");
         }
-
-//        Bundle bundle = getActivity().getIntent().getExtras();
-
-//        Bundle bundle = getArguments();
-//        userName = bundle.getString("userName");
-//        password = bundle.getString("password");
-
         viewUserInfoButton = (TextView) root.findViewById(R.id.viewUserInfoButton);
         aboutUsInfoButton = (TextView) root.findViewById(R.id.aboutUsInfoButton);
         logoutButton = (TextView) root.findViewById(R.id.logoutButton);
@@ -60,8 +52,6 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
 
         logoutButton.setOnClickListener(this);
 
-//        final TextView textView = binding.textNotifications;
-//        InfoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -81,13 +71,10 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface arg0, int arg1) {
-//                        setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
                         Intent logoutConfirm = new Intent(getActivity(), custLogin.class);
                         startActivity(logoutConfirm);
-//                        finish();
                         Toast.makeText(getActivity(), "Log out successfully\nsee you again!", Toast.LENGTH_SHORT).show();
                     }
-
                 }).create().show();
     }
 
@@ -113,7 +100,4 @@ public class userInfoFragment extends Fragment implements View.OnClickListener{
             startActivity(aboutUsActivity);
         }
     };
-
-
-
 }

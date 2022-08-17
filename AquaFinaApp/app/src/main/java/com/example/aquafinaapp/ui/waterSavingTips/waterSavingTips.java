@@ -9,8 +9,6 @@ import android.os.Bundle;
 import com.example.aquafinaapp.Controller.customerController;
 import com.example.aquafinaapp.R;
 import com.example.aquafinaapp.databinding.FragmentFaqBinding;
-import com.example.aquafinaapp.ui.faq.faqAdapter;
-import com.example.aquafinaapp.ui.faq.faqWords;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,13 +27,10 @@ public class waterSavingTips extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_saving_tips);
 
-//        binding = FragmentFaqBinding.inflate(inflater, container, false);
-
         recyclerViewTips = (RecyclerView) findViewById(R.id.recyclerViewTips);
 
         initData();
         setRecyclerView();
-
     }
 
     private void setRecyclerView() {

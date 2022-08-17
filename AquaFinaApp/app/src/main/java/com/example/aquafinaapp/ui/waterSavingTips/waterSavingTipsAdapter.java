@@ -9,10 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.aquafinaapp.R;
-import com.example.aquafinaapp.ui.faq.faqWords;
-
 import java.util.List;
 
 public class waterSavingTipsAdapter extends RecyclerView.Adapter<waterSavingTipsAdapter.tipsVH> {
@@ -70,9 +67,6 @@ public class waterSavingTipsAdapter extends RecyclerView.Adapter<waterSavingTips
 
                 }
             });
-
         }
-
     }
-
 }

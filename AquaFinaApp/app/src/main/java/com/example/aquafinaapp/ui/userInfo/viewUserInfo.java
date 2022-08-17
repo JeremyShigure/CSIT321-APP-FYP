@@ -49,7 +49,6 @@ public class viewUserInfo extends AppCompatActivity {
         returnHomeButton = findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
-
         updateUserInfoButton = (Button)findViewById(R.id.updateUserInfoButton);
         updateUserInfoButton.setOnClickListener(updateUserInfo);
 
@@ -79,7 +78,6 @@ public class viewUserInfo extends AppCompatActivity {
         tvShowRegion.setText(showTvShowRegion);
         tvShowAddress.setText(showTvShowAddress);
         tvShowFullName.setText(showTvShowFullName);
-
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
@@ -89,10 +87,8 @@ public class viewUserInfo extends AppCompatActivity {
             returnHomeActivity.putExtra("userName", userName);
             returnHomeActivity.putExtra("password", password);
             startActivity(returnHomeActivity);
-
         }
     };
-
 
     private View.OnClickListener updateUserInfo = new View.OnClickListener() {
         @Override
@@ -103,6 +99,4 @@ public class viewUserInfo extends AppCompatActivity {
             startActivity(updateUserInfoActivity);
         }
     };
-
-
 }

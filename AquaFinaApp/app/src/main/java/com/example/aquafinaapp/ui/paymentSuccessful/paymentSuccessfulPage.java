@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
-import com.example.aquafinaapp.ui.payment.newestMonthBillDetails;
 
 public class paymentSuccessfulPage extends AppCompatActivity {
 
@@ -29,8 +28,6 @@ public class paymentSuccessfulPage extends AppCompatActivity {
 
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
-
-
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {

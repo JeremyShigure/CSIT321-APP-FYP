@@ -39,7 +39,6 @@ public class faqAdapter extends RecyclerView.Adapter<faqAdapter.faqVH> {
         holder.faqRelativeLayout.setVisibility(isExpandable ? View.VISIBLE : View.GONE);
     }
 
-
     @Override
     public int getItemCount() {
         return faqQuestionsList.size();
@@ -69,9 +68,6 @@ public class faqAdapter extends RecyclerView.Adapter<faqAdapter.faqVH> {
 
                 }
             });
-
         }
-
     }
-
 }

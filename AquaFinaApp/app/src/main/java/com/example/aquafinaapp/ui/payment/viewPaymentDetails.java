@@ -17,7 +17,6 @@ import java.util.ArrayList;
 
 public class viewPaymentDetails extends AppCompatActivity {
 
-
     private String userName;
     private String password;
 
@@ -48,7 +47,7 @@ public class viewPaymentDetails extends AppCompatActivity {
         password = intent.getStringExtra("password");
 
 
-//        // Declaring variables
+        // Declaring variables
         tvShowDate = (TextView)findViewById(R.id.tvShowDate);
         tvShowDate2 = (TextView)findViewById(R.id.tvShowDate2);
         tvShowDate3 = (TextView)findViewById(R.id.tvShowDate3);
@@ -82,7 +81,6 @@ public class viewPaymentDetails extends AppCompatActivity {
                 paymentDetails.moveToNext();
             }
             paymentDetails.close();
-
         }
         else if (!dates.isEmpty() && !prices.isEmpty()) {
             dates.clear();
@@ -99,7 +97,6 @@ public class viewPaymentDetails extends AppCompatActivity {
                 paymentDetails.moveToNext();
             }
             paymentDetails.close();
-
         }
         System.out.println(dates);
         System.out.println(prices);
@@ -117,7 +114,7 @@ public class viewPaymentDetails extends AppCompatActivity {
         tvShowDate4.setText(date4);
         tvShowDate5.setText(date5);
         tvShowDate6.setText(date6);
-//
+
         price1 = prices.get(5);
         price2 = prices.get(4);
         price3 = prices.get(3);
@@ -135,14 +132,12 @@ public class viewPaymentDetails extends AppCompatActivity {
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
-
         btnBillDetails1.setOnClickListener(billDetail1);
         btnBillDetails2.setOnClickListener(billDetail2);
         btnBillDetails3.setOnClickListener(billDetail3);
         btnBillDetails4.setOnClickListener(billDetail4);
         btnBillDetails5.setOnClickListener(billDetail5);
         btnBillDetails6.setOnClickListener(billDetail6);
-
     }
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
@@ -250,6 +245,4 @@ public class viewPaymentDetails extends AppCompatActivity {
             startActivity(billDetailsActivity);;
         }
     };
-
-
 }

@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.example.aquafinaapp.Controller.customerController;
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
-import com.example.aquafinaapp.ui.paymentSuccessful.paymentPage;
 
 public class billDetails extends AppCompatActivity {
 
@@ -39,7 +38,6 @@ public class billDetails extends AppCompatActivity {
         startDate = intent.getStringExtra("startDate");
         totalCost = intent.getStringExtra("totalCost");
 
-
         // Declaring variables
         tvAccountNo = (TextView)findViewById(R.id.tvAccountNo);
         tvInvoiceID = (TextView)findViewById(R.id.tvInvoiceID);
@@ -53,7 +51,6 @@ public class billDetails extends AppCompatActivity {
         tvTotalAmt = (TextView)findViewById(R.id.tvTotalAmt);
         tvShowDateIssuedWords = (TextView)findViewById(R.id.tvShowDateIssuedWords);
         tvShowDueDateWords = (TextView)findViewById(R.id.tvShowDueDateWords);
-
 
         Cursor billInvoiceDetails = cusController.getInvoiceInfo(startDate, totalCost, userName);
 
@@ -75,30 +72,9 @@ public class billDetails extends AppCompatActivity {
         }
         billInvoiceDetails.close();
 
-
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
-
-//        payButton = (Button) findViewById(R.id.payButton);
-//        payButton.setOnClickListener(paymentButton);
     }
-
-
-    // pay function
-//    private View.OnClickListener paymentButton = new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            Intent paymentButtonActivity = new Intent (billDetails.this, paymentPage.class);
-//            paymentButtonActivity.putExtra("userName", userName);
-//            paymentButtonActivity.putExtra("password", password);
-//
-//            paymentButtonActivity.putExtra("startDate", startDate);
-//            paymentButtonActivity.putExtra("totalCost", totalCost);
-//
-//            startActivity(paymentButtonActivity);
-//        }
-//    };
-
 
     private View.OnClickListener returnHome = new View.OnClickListener() {
         @Override
@@ -109,6 +85,4 @@ public class billDetails extends AppCompatActivity {
             startActivity(returnHomeActivity);
         }
     };
-
-
 }

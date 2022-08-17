@@ -44,15 +44,11 @@ public class paymentPage extends AppCompatActivity {
         etCVC = (EditText) findViewById(R.id.etCVC);
         etName = (EditText) findViewById(R.id.etName);
 
-
         btnConfirm = (Button) findViewById(R.id.btnConfirm);
         btnCancelPayment = (Button) findViewById(R.id.btnCancelPayment);
 
-
         btnConfirm.setOnClickListener(confirmPayment);
         btnCancelPayment.setOnClickListener(cancelPayment);
-
-
     }
 
     private View.OnClickListener confirmPayment = new View.OnClickListener() {
@@ -89,12 +85,7 @@ public class paymentPage extends AppCompatActivity {
                                 finish();
                                 Toast.makeText(paymentPage.this, "Payment Successful!\nHave a nice day!", Toast.LENGTH_SHORT).show();
                             }
-
                         }).create().show();
-//                Intent confirmPaymentActivity = new Intent (paymentPage.this, paymentPage.class);
-//                confirmPaymentActivity.putExtra("userName", userName);
-//                confirmPaymentActivity.putExtra("password", password);
-//                startActivity(confirmPaymentActivity);
             }
         }
     };
@@ -125,12 +116,6 @@ public class paymentPage extends AppCompatActivity {
                         }
 
                     }).create().show();
-
-//            Intent cancelPaymentActivity = new Intent (paymentPage.this, billDetails.class);
-//            cancelPaymentActivity.putExtra("userName", userName);
-//            cancelPaymentActivity.putExtra("password", password);
-//            startActivity(cancelPaymentActivity);
         }
     };
-
 }

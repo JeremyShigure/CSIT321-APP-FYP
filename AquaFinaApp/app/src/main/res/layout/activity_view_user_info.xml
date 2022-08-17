@@ -7,7 +7,6 @@
     tools:context=".ui.userInfo.viewUserInfo"
     android:orientation="vertical">
 
-    <!-- Top Half UI -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="230dp"
@@ -57,13 +56,6 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="20dp">
 
-                <!--<ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/profileone" />-->
-
                 <TextView
                     android:id="@+id/profile_label"
                     android:layout_width="wrap_content"
@@ -79,7 +71,6 @@
         </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
-    <!-- Top Half UI -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -87,14 +78,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:orientation="vertical">
-
-        <!--<androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomeCard"/>-->
 
         <TextView
             android:id="@+id/tvUserName"
@@ -114,24 +97,12 @@
             android:textColor="@color/black"
             android:fontFamily="@font/opensans_reg"
             android:textSize="17dp" />
-        <!--app:layout_constraintStart_toEndOf="@+id/tvUserName"
-        app:layout_constraintTop_toTopOf="parent"-->
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="3dp"
             android:background="#C1C1C1"/>
-
-        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-        <!--<androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clContactNo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvShowUsername">-->
 
         <TextView
             android:id="@+id/tvContactNo"
@@ -160,15 +131,6 @@
         android:layout_height="1dp"
         android:layout_marginTop="3dp"
         android:background="#C1C1C1"/>
-                <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-        <!--<androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clContactNo">-->
 
         <TextView
             android:id="@+id/tvEmail"
@@ -198,16 +160,6 @@
             android:layout_marginTop="3dp"
             android:background="#C1C1C1"/>
 
-        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-        <!--<androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clRegion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clEmail">-->
-
         <TextView
             android:id="@+id/tvRegion"
             android:layout_width="wrap_content"
@@ -235,43 +187,6 @@
             android:layout_height="1dp"
             android:layout_marginTop="3dp"
             android:background="#C1C1C1"/>
-        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-        <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--        android:id="@+id/clBankAccount"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/clRegion">-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/tvBankAccount"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Bank Account:"-->
-        <!--            android:textSize="20dp"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/tvShowBankAccount"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:layout_constraintStart_toEndOf="@+id/tvBankAccount"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-        <!--<androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clAddress"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/clRegion">-->
 
         <TextView
             android:id="@+id/tvAddress"
@@ -299,44 +214,6 @@
             android:layout_height="1dp"
             android:background="#C1C1C1"/>
 
-            <!--app:layout_constraintStart_toEndOf="@+id/tvAddress"
-            android:lines="4"
-            app:layout_constraintTop_toTopOf="parent"-->
-
-
-        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
-        <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-        <!--        android:id="@+id/wmID"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintHorizontal_bias="0.0"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/clAddress">-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/tvWmID"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="wmID:"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="20dp"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/tvShowWmID"-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toEndOf="@+id/tvWmID"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-
         <Button
             android:id="@+id/updateUserInfoButton"
             android:layout_width="match_parent"
@@ -351,9 +228,6 @@
             app:backgroundTint="#0047ab"
             app:icon="@drawable/ic_baseline_update_24"
             app:iconSize="15dp" />
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/clAddress"-->
 
         <Button
             android:id="@+id/returnHomeButton"
@@ -363,10 +237,7 @@
             android:textSize="13dp"
             android:text="Return to home page"
             android:fontFamily="@font/antic"/>
-        <!--app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateUserInfoButton"-->
+        
     </LinearLayout>
 
 </LinearLayout>

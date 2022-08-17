@@ -13,7 +13,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.aquafinaapp.MainActivity;
 import com.example.aquafinaapp.R;
-import com.example.aquafinaapp.ui.payment.billDetails;
 
 public class aboutUs extends AppCompatActivity {
 
@@ -35,7 +34,6 @@ public class aboutUs extends AppCompatActivity {
         returnHomeButton = (Button) findViewById(R.id.returnHomeButton);
         returnHomeButton.setOnClickListener(returnHome);
 
-
         tvOfficeNum = (TextView) findViewById(R.id.tvOfficeNum);
         tvOfficeNum.setOnClickListener(phoneCall);
 
@@ -51,7 +49,6 @@ public class aboutUs extends AppCompatActivity {
         public void onClick(View view) {
             Intent returnHomeActivity = new Intent(aboutUs.this, MainActivity.class);
 
-
             userInfoFragment myFrag = new userInfoFragment();
 
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -63,15 +60,12 @@ public class aboutUs extends AppCompatActivity {
 
             myFrag.setArguments(bundle);
 
-//            fragmentTransaction.replace(R.id.navigation_userInfo, myFrag).addToBackStack(userInfoFragment.class.getSimpleName()).commit();
-
             myFrag.setArguments(bundle);
             returnHomeActivity.putExtras(bundle);
 
             returnHomeActivity.putExtra("userName", userName);
             returnHomeActivity.putExtra("password", password);
             startActivity(returnHomeActivity);
-
         }
     };
 
@@ -107,8 +101,4 @@ public class aboutUs extends AppCompatActivity {
             startActivity(addressActivity);
         }
     };
-
-
-
-
 }
