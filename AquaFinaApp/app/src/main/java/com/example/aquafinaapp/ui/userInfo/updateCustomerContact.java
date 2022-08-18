@@ -47,7 +47,7 @@ public class updateCustomerContact extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (etContactNo.getText().toString().isEmpty()) {
-                Toast.makeText(updateCustomerContact.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(updateCustomerContact.this, "Contact number cannot be empty!", Toast.LENGTH_SHORT).show();
             }
             else if (etContactNo.getText().toString().length() != 8) {
                 Toast.makeText(updateCustomerContact.this, "Please enter a 8-digit phone number", Toast.LENGTH_SHORT).show();

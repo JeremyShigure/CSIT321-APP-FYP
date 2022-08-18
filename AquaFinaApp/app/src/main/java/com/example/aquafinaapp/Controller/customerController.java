@@ -38,8 +38,8 @@ public class customerController extends AppCompatActivity {
         }
     }
 
-    public boolean updateCustomerContact(String cUsername, String cPassword, String cContact) {
-        boolean isValidate = customer.updateCustomerContact(cUsername, cPassword, cContact);
+    public boolean updateCustomerContact(String userName, String password, String contact) {
+        boolean isValidate = customer.updateCustomerContact(userName, password, contact);
 
         if (isValidate) {
             return true;
@@ -49,8 +49,8 @@ public class customerController extends AppCompatActivity {
         }
     }
 
-    public boolean updateCustomerEmail(String cUsername, String cPassword, String cEmail) {
-        boolean isValidate = customer.updateCustomerEmail(cUsername, cPassword, cEmail);
+    public boolean updateCustomerEmail(String userName, String password, String email) {
+        boolean isValidate = customer.updateCustomerEmail(userName, password, email);
 
         if (isValidate) {
             return true;
@@ -60,8 +60,8 @@ public class customerController extends AppCompatActivity {
         }
     }
 
-    public boolean updateCustomerPassword(String cUsername, String cPassword, String newPassword) {
-        boolean isValidate = customer.updateCustomerPassword(cUsername, cPassword, newPassword);
+    public boolean updateCustomerPassword(String userName, String password, String newPassword) {
+        boolean isValidate = customer.updateCustomerPassword(userName, password, newPassword);
 
         if (isValidate) {
             return true;

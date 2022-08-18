@@ -43,12 +43,17 @@ public class updateCustomerPassword extends AppCompatActivity {
         returnHomeButton.setOnClickListener(updateAndReturnHome);
     }
 
-
     private View.OnClickListener updateAndReturnHome = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (etPassword.getText().toString().isEmpty() || etConfirmPassword.getText().toString().isEmpty()) {
-                Toast.makeText(updateCustomerPassword.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+            if (etPassword.getText().toString().isEmpty() && etConfirmPassword.getText().toString().isEmpty()) {
+                Toast.makeText(updateCustomerPassword.this, "Both password and new password cannot be empty!", Toast.LENGTH_SHORT).show();
+            }
+            else if (etPassword.getText().toString().isEmpty()) {
+                Toast.makeText(updateCustomerPassword.this, "Password cannot be empty!", Toast.LENGTH_SHORT).show();
+            }
+            else if (etConfirmPassword.getText().toString().isEmpty()) {
+                Toast.makeText(updateCustomerPassword.this, "New password cannot be empty!", Toast.LENGTH_SHORT).show();
             }
             else if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
                 Toast.makeText(updateCustomerPassword.this, "Please make sure passwords are same!", Toast.LENGTH_SHORT).show();

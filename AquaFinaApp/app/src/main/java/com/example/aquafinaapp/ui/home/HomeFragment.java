@@ -191,7 +191,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
         YAxis axisLeft = chart.getAxisLeft();
         axisLeft.setGranularity(10f);
         axisLeft.setAxisMinimum(0);
@@ -199,9 +198,7 @@ public class HomeFragment extends Fragment {
 
         YAxis axisRight = chart.getAxisRight();
         axisRight.setAxisMinimum(0);
-
     }
-
 
     private BarData createChartData() {
         ArrayList<BarEntry> values = new ArrayList<>();

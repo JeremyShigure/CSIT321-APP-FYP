@@ -112,14 +112,14 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/etExpireDay"
+            android:id="@+id/etExpireMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvExpire"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="-5dp"
             android:fontFamily="@font/opensans_reg"
-            android:hint="dd"
+            android:hint="mm"
             android:inputType="number"
             android:maxLength="2"
             android:textSize="18sp" />
@@ -132,14 +132,14 @@
             android:layout_marginLeft="2dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="2dp"
-            android:layout_toRightOf="@id/etExpireDay"
+            android:layout_toRightOf="@id/etExpireMonth"
             android:fontFamily="@font/opensans_reg"
             android:text="/"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/etExpireMonth"
+            android:id="@+id/etExpireYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvExpire"
@@ -147,7 +147,7 @@
             android:layout_marginTop="-5dp"
             android:layout_toRightOf="@id/tvSlash"
             android:fontFamily="@font/opensans_reg"
-            android:hint="mm"
+            android:hint="yy"
             android:inputType="number"
             android:maxLength="2"
             android:textSize="18sp" />
@@ -175,7 +175,7 @@
             android:layout_marginLeft="216dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="32dp"
-            android:layout_toEndOf="@+id/etExpireMonth"
+            android:layout_toEndOf="@+id/etExpireYear"
             android:fontFamily="@font/opensans_reg"
             android:hint="Enter CVC"
             android:inputType="number"
@@ -186,7 +186,7 @@
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/etExpireDay"
+            android:layout_below="@id/etExpireMonth"
             android:layout_alignParentStart="true"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"

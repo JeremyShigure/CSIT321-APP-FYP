@@ -49,7 +49,7 @@ public class updateCustomerEmail extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (etEmail.getText().toString().isEmpty()) {
-                Toast.makeText(updateCustomerEmail.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(updateCustomerEmail.this, "Email cannot be empty!", Toast.LENGTH_SHORT).show();
             }
             else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches()) {
                 Toast.makeText(updateCustomerEmail.this, "Please make sure \nemail format is correct!", Toast.LENGTH_SHORT).show();

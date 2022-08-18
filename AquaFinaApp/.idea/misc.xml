@@ -3,29 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/final llllllll/after clean/AquaFinaApp/app/src/main/res/layout/activity_payment_page.xml" value="0.33152173913043476" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/final llllllll/after clean/AquaFinaApp/app/src/main/res/layout/activity_payment_successful_page.xml" value="0.17314814814814813" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/final llllllll/after clean/AquaFinaApp/app/src/main/res/layout/activity_view_user_info.xml" value="0.28442028985507245" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/AquaFinaApp/app/src/main/res/layout/activity_payment_details.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/AquaFinaApp/app/src/main/res/layout/activity_payment_page.xml" value="0.5" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/AquaFinaApp/app/src/main/res/layout/activity_payment_successful_page.xml" value="0.2966485507246377" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/AquaFinaApp/app/src/main/res/layout/fragment_payment.xml" value="0.1" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_bill_details.xml" value="0.15282392026578073" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_newest_month_bill_details.xml" value="0.25" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_payment_details.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/activity_payment_page.xml" value="0.2866847826086957" />
-        <entry key="..\:/Users/Woon Wei Jie/Desktop/test back to local db/final liaoooo/aquaFina/app/src/main/res/layout/fragment_payment.xml" value="0.25815217391304346" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_login_page.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_payment_page.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_update_customer_password.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_update_cutsomer_options.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_update_user_info.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/activity_water_saving_tips.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/faq_row.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/fragment_faq.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/fragment_user_info.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/rv_payment_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/woonw/OneDrive/Desktop/clean up/before/AquaFinaApp/app/src/main/res/layout/tips_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Woon Wei Jie/Desktop/final llllllll/after clean/AquaFinaApp/app/src/main/res/layout/activity_payment_page.xml" value="0.24230072463768115" />
       </map>
     </option>
   </component>

@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.aquafinaapp.R;
-import com.example.aquafinaapp.ui.loginPage.custLogin;
-import com.example.aquafinaapp.ui.payment.billDetails;
+import com.example.aquafinaapp.ui.payment.newestMonthBillDetails;
+
 
 public class paymentPage extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class paymentPage extends AppCompatActivity {
     private String invoiceID;
     private String totalCost;
 
-    EditText etCreditCard, etExpireDay, etExpireMonth, etCVC, etName;
+    EditText etCreditCard, etExpireMonth, etExpireYear, etCVC, etName;
 
     Button btnConfirm, btnCancelPayment;
 
@@ -39,8 +39,8 @@ public class paymentPage extends AppCompatActivity {
         totalCost = intent.getStringExtra("totalCost");
 
         etCreditCard = (EditText) findViewById(R.id.etCreditCard);
-        etExpireDay = (EditText) findViewById(R.id.etExpireDay);
         etExpireMonth = (EditText) findViewById(R.id.etExpireMonth);
+        etExpireYear = (EditText) findViewById(R.id.etExpireYear);
         etCVC = (EditText) findViewById(R.id.etCVC);
         etName = (EditText) findViewById(R.id.etName);
 
@@ -55,17 +55,26 @@ public class paymentPage extends AppCompatActivity {
         @Override
         public void onClick(View view) {
 
-            if (etCreditCard.getText().toString().isEmpty() || etExpireDay.getText().toString().isEmpty() || etExpireMonth.getText().toString().isEmpty() || etCVC.getText().toString().isEmpty() || etName.getText().toString().isEmpty()) {
+            if (etCreditCard.getText().toString().isEmpty() && etExpireMonth.getText().toString().isEmpty() && etExpireYear.getText().toString().isEmpty() && etCVC.getText().toString().isEmpty() && etName.getText().toString().isEmpty()) {
                 Toast.makeText(paymentPage.this, "One or more fields is empty!", Toast.LENGTH_SHORT).show();
             }
             else if (etCreditCard.getText().toString().length() != 16) {
                 Toast.makeText(paymentPage.this, "Please enter correct credit card details!", Toast.LENGTH_SHORT).show();
             }
-            else if (etExpireDay.getText().toString().length() != 2 || etExpireMonth.getText().toString().length() != 2) {
+            else if (etExpireMonth.getText().toString().length() != 2 || etExpireYear.getText().toString().length() != 2) {
                 Toast.makeText(paymentPage.this, "Please enter expiry date format!", Toast.LENGTH_SHORT).show();
             }
             else if (etCVC.getText().toString().length() != 3) {
-                Toast.makeText(paymentPage.this, "Please enter CVC format!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(paymentPage.this, "Please enter correct CVC format!", Toast.LENGTH_SHORT).show();
+            }
+            else if (etName.getText().toString().isEmpty()) {
+                Toast.makeText(paymentPage.this, "Card name cannot be empty!", Toast.LENGTH_SHORT).show();
+            }
+            else if (Integer.parseInt(etExpireMonth.getText().toString()) > 12) {
+                Toast.makeText(paymentPage.this, "Invalid month!", Toast.LENGTH_SHORT).show();
+            }
+            else if (Integer.parseInt(etExpireYear.getText().toString()) < 21) {
+                Toast.makeText(paymentPage.this, "Invalid year!", Toast.LENGTH_SHORT).show();
             }
             else {
 
@@ -102,7 +111,7 @@ public class paymentPage extends AppCompatActivity {
 
                         public void onClick(DialogInterface arg0, int arg1) {
                             setResult(RESULT_OK, new Intent().putExtra("EXIT", true));
-                            Intent cancelPaymentActivity = new Intent (paymentPage.this, billDetails.class);
+                            Intent cancelPaymentActivity = new Intent (paymentPage.this, newestMonthBillDetails.class);
                             cancelPaymentActivity.putExtra("userName", userName);
                             cancelPaymentActivity.putExtra("password", password);
 

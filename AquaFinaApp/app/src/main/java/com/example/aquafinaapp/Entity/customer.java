@@ -202,17 +202,17 @@ public class customer extends SQLiteOpenHelper {
     }
 
     // Update the customer contact number
-    public boolean updateCustomerContact(String cUsername, String cPassword, String cContact) {
+    public boolean updateCustomerContact(String userName, String password, String contact) {
 
         SQLiteDatabase db = openDatabase();
 
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("cContact", cContact);
+        contentValues.put("cContact", contact);
 
         // If update fails, its gonna return -1 to us
 
-        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{userName, password});
 
         if(result == -1) {
             return false;
@@ -223,17 +223,17 @@ public class customer extends SQLiteOpenHelper {
     }
 
     // Update the customer email
-    public boolean updateCustomerEmail(String cUsername, String cPassword, String cEmail) {
+    public boolean updateCustomerEmail(String userName, String password, String email) {
 
         SQLiteDatabase db = openDatabase();
 
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("cEmail", cEmail);
+        contentValues.put("cEmail", email);
 
         // If update fails, its gonna return -1 to us
 
-        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{userName, password});
 
         if(result == -1) {
             return false;
@@ -244,7 +244,7 @@ public class customer extends SQLiteOpenHelper {
     }
 
     // Update the customer password
-    public boolean updateCustomerPassword(String cUsername, String cPassword, String newPassword) {
+    public boolean updateCustomerPassword(String userName, String password, String newPassword) {
 
         SQLiteDatabase db = openDatabase();
 
@@ -254,7 +254,7 @@ public class customer extends SQLiteOpenHelper {
 
         // If update fails, its gonna return -1 to us
 
-        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{cUsername, cPassword});
+        long result = db.update("customer", contentValues, "cUsername = ? and cPassword = ?", new String[]{userName, password});
 
         if(result == -1) {
             return false;
@@ -316,7 +316,6 @@ public class customer extends SQLiteOpenHelper {
         return res;
     }
 
-
     // Get all the water saving tips
     public Cursor getWaterSavingTips() {
         SQLiteDatabase db = openDatabase();
@@ -327,7 +326,6 @@ public class customer extends SQLiteOpenHelper {
 
         return res;
     }
-
 
     // viewPaymentDetails.java
     public Cursor getPaymentDetails(String userName) {
@@ -341,7 +339,6 @@ public class customer extends SQLiteOpenHelper {
 
         return res;
     }
-
 
     // viewPaymentDetails.java
     public Cursor getNewestPaymentDetails(String userName) {
@@ -368,5 +365,4 @@ public class customer extends SQLiteOpenHelper {
         
         return res;
     }
-
 }

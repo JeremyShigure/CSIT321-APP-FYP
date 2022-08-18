@@ -1,13 +1,13 @@
 package com.example.aquafinaapp.ui.payment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.aquafinaapp.Controller.customerController;
 import com.example.aquafinaapp.MainActivity;
@@ -38,7 +38,6 @@ public class newestMonthBillDetails extends AppCompatActivity {
 
         invoiceID = intent.getStringExtra("invoiceID");
         totalCost = intent.getStringExtra("totalCost");
-
 
         // Declaring variables
         tvAccountNo = (TextView)findViewById(R.id.tvAccountNo);
