@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,47 +7,126 @@
     tools:context=".ui.paymentSuccessful.paymentSuccessfulPage"
     android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tvPaySuccessful"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="250dp"
-        android:gravity="center">
+        android:layout_marginTop="64dp"
+        android:layout_weight="1"
+        app:cardBackgroundColor="#097969"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="450dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="#097969"
-            app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Payment Successful!"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="Payment Successful!"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
+        </RelativeLayout>
 
-            </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-        </com.google.android.material.card.MaterialCardView>
 
-        <Button
-            android:id="@+id/returnHomeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Return to home page"
-            android:backgroundTint="@color/navy_blue">
-        </Button>
+    <TextView
+        android:id="@+id/tvThankYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Thank you for paying your invoice!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPaySuccessful">
 
-    </LinearLayout>
+    </TextView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Start conserve water today!\nWe hope you will become one of the water saviour!!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvThankYou">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/returnHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:backgroundTint="@color/navy_blue"
+        android:text="Return to home page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWords">
+
+    </Button>
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="250dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="450dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="10dp"-->
+<!--            app:cardBackgroundColor="#097969"-->
+<!--            app:cardElevation="10dp">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:fontFamily="@font/opensans_bold"-->
+<!--                    android:text="Payment Successful!"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/returnHomeButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:text="Return to home page"-->
+<!--            android:backgroundTint="@color/navy_blue">-->
+<!--        </Button>-->
+
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
