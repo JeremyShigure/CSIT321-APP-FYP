@@ -1,0 +1,222 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.aquafinaapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- suppress DeprecatedClassUsageInspection -->
+13-->[androidx.biometric:biometric:1.1.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\8809a81c70fb30ccf0dd84abd93c1fd7\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+13-->[androidx.biometric:biometric:1.1.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\8809a81c70fb30ccf0dd84abd93c1fd7\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+14    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+14-->[androidx.biometric:biometric:1.1.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\8809a81c70fb30ccf0dd84abd93c1fd7\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+14-->[androidx.biometric:biometric:1.1.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\8809a81c70fb30ccf0dd84abd93c1fd7\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+15
+16    <application
+16-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:8:5-64:19
+17        android:allowBackup="true"
+17-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:9:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.7.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:10:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:11:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:12:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:13:9-35
+24        android:theme="@style/Theme.AquaFinaApp" >
+24-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:14:9-49
+25        <activity
+25-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:15:9-17:40
+26            android:name="com.example.aquafinaapp.ui.paymentSuccessful.paymentSuccessfulPage"
+26-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:16:13-71
+27            android:exported="false" />
+27-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:17:13-37
+28        <activity
+28-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:18:9-20:40
+29            android:name="com.example.aquafinaapp.ui.paymentSuccessful.paymentPage"
+29-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:19:13-61
+30            android:exported="false" />
+30-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:20:13-37
+31        <activity
+31-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:21:9-23:40
+32            android:name="com.example.aquafinaapp.ui.payment.newestMonthBillDetails"
+32-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:22:13-62
+33            android:exported="false" />
+33-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:23:13-37
+34        <activity
+34-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:24:9-26:40
+35            android:name="com.example.aquafinaapp.ui.waterSavingTips.waterSavingTips"
+35-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:25:13-63
+36            android:exported="false" />
+36-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:26:13-37
+37        <activity
+37-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:27:9-29:40
+38            android:name="com.example.aquafinaapp.ui.payment.billDetails"
+38-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:28:13-51
+39            android:exported="false" />
+39-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:29:13-37
+40        <activity
+40-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:30:9-32:40
+41            android:name="com.example.aquafinaapp.ui.userInfo.updateCustomerOptions"
+41-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:31:13-62
+42            android:exported="false" />
+42-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:32:13-37
+43        <activity
+43-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:33:9-35:40
+44            android:name="com.example.aquafinaapp.ui.userInfo.updateCustomerPassword"
+44-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:34:13-63
+45            android:exported="false" />
+45-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:35:13-37
+46        <activity
+46-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:36:9-38:40
+47            android:name="com.example.aquafinaapp.ui.userInfo.updateCustomerEmail"
+47-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:37:13-60
+48            android:exported="false" />
+48-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:38:13-37
+49        <activity
+49-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:39:9-41:40
+50            android:name="com.example.aquafinaapp.ui.userInfo.updateCustomerContact"
+50-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:40:13-62
+51            android:exported="false" />
+51-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:41:13-37
+52        <activity
+52-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:42:9-44:40
+53            android:name="com.example.aquafinaapp.ui.userInfo.aboutUs"
+53-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:43:13-48
+54            android:exported="false" />
+54-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:44:13-37
+55        <activity
+55-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:45:9-47:40
+56            android:name="com.example.aquafinaapp.ui.userInfo.viewUserInfo"
+56-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:46:13-53
+57            android:exported="false" />
+57-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:47:13-37
+58        <activity
+58-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:48:9-50:40
+59            android:name="com.example.aquafinaapp.MainActivity"
+59-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:49:13-41
+60            android:exported="false" />
+60-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:50:13-37
+61        <activity
+61-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:51:9-53:40
+62            android:name="com.example.aquafinaapp.ui.payment.viewPaymentDetails"
+62-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:52:13-58
+63            android:exported="false" />
+63-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:53:13-37
+64        <activity
+64-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:54:9-63:20
+65            android:name="com.example.aquafinaapp.ui.loginPage.custLogin"
+65-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:55:13-51
+66            android:exported="true"
+66-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:56:13-36
+67            android:label="@string/app_name" >
+67-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:57:13-45
+68            <intent-filter>
+68-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:58:13-62:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:59:17-69
+69-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:59:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:61:17-77
+71-->C:\Users\Woon Wei Jie\Desktop\final llllllll\after clean\AquaFinaApp\app\src\main\AndroidManifest.xml:61:27-74
+72            </intent-filter>
+73        </activity>
+74
+75        <service
+75-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:17:9-23:19
+76            android:name="com.google.firebase.components.ComponentDiscoveryService"
+76-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:18:13-84
+77            android:directBootAware="true"
+77-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+78            android:exported="false" >
+78-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:19:13-37
+79            <meta-data
+79-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:20:13-22:85
+80                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+80-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:21:17-111
+81                android:value="com.google.firebase.components.ComponentRegistrar" />
+81-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\7f26e427b6ad6d7a78a0a8d045e7706e\transformed\firebase-firestore-23.0.2\AndroidManifest.xml:22:17-82
+82        </service>
+83
+84        <activity
+84-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\38b21ff775b53685c8c44b7fc1061147\transformed\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+85            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+85-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\38b21ff775b53685c8c44b7fc1061147\transformed\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+86            android:exported="false"
+86-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\38b21ff775b53685c8c44b7fc1061147\transformed\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+87            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+87-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\38b21ff775b53685c8c44b7fc1061147\transformed\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+88
+89        <provider
+89-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+90            android:name="com.google.firebase.provider.FirebaseInitProvider"
+90-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+91            android:authorities="com.example.aquafinaapp.firebaseinitprovider"
+91-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+92            android:directBootAware="true"
+92-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+93            android:exported="false"
+93-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+94            android:initOrder="100" />
+94-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\577de00043e6490c132c4f7ada85f854\transformed\firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+95
+96        <meta-data
+96-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\07af46e64c6ab67c1c47473bf72445e3\transformed\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+97            android:name="com.google.android.gms.version"
+97-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\07af46e64c6ab67c1c47473bf72445e3\transformed\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+98            android:value="@integer/google_play_services_version" />
+98-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\07af46e64c6ab67c1c47473bf72445e3\transformed\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+99
+100        <provider
+100-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+101            android:name="androidx.startup.InitializationProvider"
+101-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+102            android:authorities="com.example.aquafinaapp.androidx-startup"
+102-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+103            android:exported="false" >
+103-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+104            <meta-data
+104-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+105-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+106                android:value="androidx.startup" />
+106-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+107            <meta-data
+107-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+108-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+109                android:value="androidx.startup" />
+109-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+110        </provider>
+111
+112        <uses-library
+112-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+113            android:name="androidx.window.extensions"
+113-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+114            android:required="false" />
+114-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+115        <uses-library
+115-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+116            android:name="androidx.window.sidecar"
+116-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+117            android:required="false" />
+117-->[androidx.window:window:1.0.0] C:\Users\Woon Wei Jie\.gradle\caches\transforms-3\f65b5ca91da7c8c2dd021bd66811129e\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+118    </application>
+119
+120</manifest>

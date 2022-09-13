@@ -1,0 +1,318 @@
+[
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_opensans_reg.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\opensans_reg.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_bill_details.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_bill_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_round_icon_3.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\round_icon_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_fingerprint_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_fingerprint_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_update_customer_contact.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_profileone.jpg.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\profileone.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_update_customer_email.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_info_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_info_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_rv_payment_details.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\rv_payment_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_safety_check_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_safety_check_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_rounded_back.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\rounded_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_round_icon_2.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\round_icon_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_update_customer_password.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_about_us.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_aquafinacircle.jpg.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\aquafinacircle.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_robotoregular.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\robotoregular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_phone_android_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_phone_android_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable-v24_profile_icon.jpg.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable-v24\\profile_icon.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_aquafina_logo.jpg.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\aquafina_logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_supervised_user_circle_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_supervised_user_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-pngs-30:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_bungee.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\bungee.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_water_damage_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_water_damage_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_opensans_bold.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\opensans_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_update_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_update_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_opensans_med.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\opensans_med.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_tips_row.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\tips_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_fragment_payment.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_payment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_question_answer_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_question_answer_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_payment_successful_page.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_successful_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_robotobold.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\robotobold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_update_cutsomer_options.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_cutsomer_options.xml"
+    },
+    {
+        "merged": "com.example.aquafinaapp-merged_res-35:/layout_activity_payment_successful_page.xml.flat",
+        "source": "com.example.aquafinaapp-main-37:/layout/activity_payment_successful_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_water_saving_tips.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_water_saving_tips.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_round_icon_1.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\round_icon_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_antic.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\antic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_fragment_faq.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_faq.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\font_montserratreg.ttf.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\font\\montserratreg.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_login_page.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_round_icon_4.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\round_icon_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_view_user_info.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_view_user_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_payment_details.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_newest_month_bill_details.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_newest_month_bill_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_aquafinarect.jpg.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\aquafinarect.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_activity_payment_page.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_faq_row.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\faq_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_chevron_right_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_chevron_right_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_power_settings_new_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_power_settings_new_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_payment_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_payment_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_local_phone_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_local_phone_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\layout_fragment_user_info.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_user_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-merged_res-35:\\drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\drawable\\ic_baseline_location_on_24.xml"
+    }
+]

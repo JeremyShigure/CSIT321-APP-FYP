@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_update_customer_password.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_update_customer_contact.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_payment_successful_page.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_successful_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_bill_details.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_bill_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_newest_month_bill_details.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_newest_month_bill_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\faq_row.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\faq_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\fragment_faq.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_faq.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_water_saving_tips.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_water_saving_tips.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\fragment_user_info.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_user_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\rv_payment_details.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\rv_payment_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_login_page.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_login_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_payment_page.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\fragment_payment.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\fragment_payment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_about_us.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_update_cutsomer_options.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_cutsomer_options.xml"
+    },
+    {
+        "merged": "com.example.aquafinaapp-mergeDebugResources-34:/layout/activity_payment_successful_page.xml",
+        "source": "com.example.aquafinaapp-main-37:/layout/activity_payment_successful_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\tips_row.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\tips_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_view_user_info.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_view_user_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_payment_details.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_payment_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-mergeDebugResources-34:\\layout\\activity_update_customer_email.xml",
+        "source": "C:\\Users\\Woon Wei Jie\\.gradle\\daemon\\7.3.3\\com.example.aquafinaapp-main-37:\\layout\\activity_update_customer_email.xml"
+    }
+]
